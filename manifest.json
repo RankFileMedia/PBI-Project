@@ -1,0 +1,81 @@
+{
+    "name": "RankFileMedia",
+    "short_name": "RankFileMedia",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fdfdfd",
+    "theme_color": "#db4938",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/images/icons/72.png",
+        "type": "image/png",
+        "sizes": "72x72"
+      },
+      {
+        "src": "/images/icons/76.png",
+        "type": "image/png",
+        "sizes": "76x76"
+      },
+      {
+        "src": "/images/icons/80.png",
+        "type": "image/png",
+        "sizes": "80x80"
+      },
+      {
+        "src": "/images/icons/87.png",
+        "type": "image/png",
+        "sizes": "87x87"
+      },
+      {
+        "src": "/images/icons/100.png",
+        "type": "image/png",
+        "sizes": "100x100"
+      },
+      {
+        "src": "/images/icons/114.png",
+        "type": "image/png",
+        "sizes": "114x114"
+      },
+      {
+        "src": "/images/icons/120.png",
+        "type": "image/png",
+        "sizes": "120x120"
+      },
+      {
+        "src": "/images/icons/128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "/images/icons/144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "/images/icons/152.png",
+        "type": "image/png",
+        "sizes": "152x152"
+      },
+      {
+        "src": "/images/icons/167.png",
+        "type": "image/png",
+        "sizes": "167x167"
+      },
+      {
+        "src": "/images/icons/180.png",
+        "type": "image/png",
+        "sizes": "180x180"
+      },
+      {
+        "src": "/images/icons/256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "/images/icons/512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
