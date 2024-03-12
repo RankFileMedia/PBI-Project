@@ -68,8 +68,8 @@
   
     
     <main class="flex justify-between">
-        <article class="w-full max-w-4xl mx-auto p-8 bg-white shadow-lg">
-          <h1 class="text-3xl font-bold mt-4">Arkansas Foodbank Distribution Event Runs Out of Food Early Because of Demand</h1>
+        <article class="w-full max-w-6xl mx-auto p-8 bg-white shadow-lg">
+          <h1 class="text-3xl font-bold mt-4 mb-4">Arkansas Foodbank Distribution Event Runs Out of Food Early Because of Demand</h1>
           <div class="flex items-center">
             <svg class="w-6 h-6 text-yellow-400 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
                 <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
@@ -303,16 +303,22 @@
         </article>
         
         
-        <aside class="w-1/3 p-8">
-            <h2 class="text-xl font-bold mb-4">More from another reporters</h2>
-            <div class="mb-4">
-                <img src="./images/thumnails/cat.jpg" alt="Thumbnail" class="w-full h-32 object-cover">
-                <h3 class="font-bold mt-2">Post Title</h3>
-                <p class="text-sm text-gray-600">Post excerpt...</p>
-                <span class="text-xs text-gray-500">Read Time</span>
-            </div>
-            <!-- Repeat the above div block for each sidebar post -->
-        </aside>
+        <aside class="w-1/4 p-8">
+          <h2 class="text-xl font-bold mb-4">More from other reporters</h2>
+          <div class="mb-4 relative">
+              <!-- Container with rounded circle -->
+              <div class="w-70 h-24 rounded-3xl bg-gray-200 overflow-hidden">
+                  <!-- Cat picture inside the rounded circle -->
+                  <img src="/images/cat.jpg" alt="cat" class="w-24 h-full rounded-3xl object-cover" >
+              </div>
+              <!-- Content below the circle -->
+              
+              <h3 class="font-bold mt-2">Cute Cat</h3>
+              <p class="text-sm text-gray-600">I love my cat</p>
+              <span class="text-xs text-gray-500">2s</span>
+          </div>
+          <!-- Repeat the above div block for each sidebar post -->
+      </aside>
     </main>
     
     <footer class="text-center p-4 text-gray-600">
