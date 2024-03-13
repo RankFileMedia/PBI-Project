@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup with Images and Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .popup-container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .left-section {
+      flex: 1;
+      background-color: #f4f4f4;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .person-container {
+      text-align: center;
+    }
+
+    .rounded-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 10px auto;
+    }
+
+    .image-name {
+      margin-top: 5px;
+    }
+
+    .review-stars {
+      color: #ffcc00;
+      font-size: 18px;
+    }
+
+    .vertical-line {
+      width: 1px;
+      background-color: #ccc;
+    }
+
+    .right-section {
+      flex: 1;
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      width: 70%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .search-button {
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<h2>Popular Reporters</h2>
+<div class="popup-container">
+  <div class="left-section">
+    <div class="person-container">
+        <img src="./images/Caleb.png" alt="Image 1" class="rounded-image">
+        <div class="image-name">Caleb Anderson</div>
+        <div class="review-stars">★★★★★</div>
+      </div>
+      <div class="person-container">
+            <img src="./images/Contessa.png" alt="Image 2" class="rounded-image">
+            <div class="image-name">Contessa Brewer</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <div class="person-container">
+            <img src="./images/Dylan.png" alt="Image 3" class="rounded-image">
+            <div class="image-name">Dylan Turner</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <div class="person-container">
+            <img src="./images/Emma.png" alt="Image 4" class="rounded-image">
+            <div class="image-name">Emma Parker</div>
+            <div class="review-stars">★★</div>
+          </div>
+          <div class="person-container">
+            <img src="./images/Ethan.png" alt="Image 5" class="rounded-image">
+            <div class="image-name">Ethan Mitchel</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <div class="person-container">
+            <img src="./images/Lucas.png" alt="Image 6" class="rounded-image">
+            <div class="image-name">Lucas Foster</div>
+            <div class="review-stars">★★★★</div>
+          </div>
+          <div class="person-container">
+            <img src="./images/Mason.png" alt="Image 7" class="rounded-image">
+            <div class="image-name">Mason Parker</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <div class="person-container">
+            <img src="./images/Megan.png" alt="Image 8" class="rounded-image">
+            <div class="image-name">Megan Cassella</div>
+            <div class="review-stars">★★★</div>
+          </div>
+          <div class="person-container">
+            <img src="./images/Mike.png" alt="Image 9" class="rounded-image">
+            <div class="image-name">Mike Collins</div>
+            <div class="review-stars">★★★★</div>
+          </div>
+          <div class="person-container">
+            <img src="./images/Olivia.png" alt="Image 10" class="rounded-image">
+            <div class="image-name">Olivia Garcia</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <div class="person-container">
+            <img src="./images/Suzy.png" alt="Image 11" class="rounded-image">
+            <div class="image-name">Suzy Berkshire</div>
+            <div class="review-stars">★★★★</div>
+          </div>
+  
+  </div>
+
+  <div class="vertical-line"></div>
+
+  <div class="right-section">
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search...">
+      <button class="search-button">Search</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
