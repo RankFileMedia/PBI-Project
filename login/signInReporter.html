@@ -50,7 +50,7 @@
                 type="text"
                 id="FirstName"
                 name="first_name"
-                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                class="mt-1 w-full pl-1 rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
               />
             </div>
   
@@ -63,7 +63,7 @@
                 type="text"
                 id="LastName"
                 name="last_name"
-                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                class="mt-1 w-full pl-1 rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
               />
             </div>
   
@@ -74,7 +74,7 @@
                 type="email"
                 id="Email"
                 name="email"
-                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                class="mt-1 w-full pl-1 rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
               />
             </div>
   
@@ -85,7 +85,7 @@
                 type="password"
                 id="Password"
                 name="password"
-                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                class="mt-1 w-full pl-1 rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
               />
             </div>
   
@@ -98,7 +98,7 @@
                 type="password"
                 id="PasswordConfirmation"
                 name="password_confirmation"
-                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                class="mt-1 pl-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
               />
             </div>
 
@@ -109,9 +109,20 @@
                 id="Experience"
                 name="experience"
                 rows="4"
-                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                class="mt-1 w-full pl-1 py-1 rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
               ></textarea>
             </div>
+
+            <!-- <div class="col-span-6">
+              <label for="LinkedIn" class="block text-sm font-medium text-gray-700"> LinkedIn </label>
+  
+              <textarea
+                id="LinkedIn"
+                name="LinkedIn"
+                rows="2"
+                class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+              ></textarea>
+            </div> -->
 
             <div class="col-span-6">
               <label for="ProfilePhoto" class="block text-sm font-medium text-gray-700"> Profile Photo </label>
@@ -123,9 +134,10 @@
                 class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                 onchange="previewProfilePhoto(event)"
               />
-              <div class="mt-2">
-                <img id="profilePhotoPreview" class="hidden w-full rounded-md border border-gray-200" alt="Profile Photo Preview">
+              <div class="mt-2 mx-auto">
+                <img id="profilePhotoPreview" class="hidden w-28 rounded-full border border-gray-200" alt="Profile Photo Preview">
               </div>
+              
             </div>
   
             <div class="col-span-6">
