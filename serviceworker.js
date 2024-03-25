@@ -1,8 +1,16 @@
 const rankFileMedia = "rank-file-media-v1";
 const assets = [
   "/",
-  "/index.html",
-  "/js/app.js"
+  "/main.html",
+  "/js/app.js",
+  "/login/loginPopup.html",
+  "/login/signIn.html",
+  "/login/signUp.html",
+  "/login/js/loginPopup.js",
+  "/login/js/signIn.js",
+  "/cards/caleb.html",
+  "/cards/contessa.html",
+
 ];
 
 self.addEventListener("install", installEvent => {
