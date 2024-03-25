@@ -5,6 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Story</title>
+    <style>
+        .star:hover,
+        .star.clicked {
+            fill: rgb(240, 199, 65);
+        }
+        .star1:hover,
+        .star1.clicked {
+            fill: rgb(240, 199, 65);
+        }
+        .star2:hover,
+        .star2.clicked {
+            fill: rgb(240, 199, 65);
+        }
+        .star3:hover,
+        .star3.clicked {
+            fill: rgb(240, 199, 65);
+        }
+        .star4:hover,
+        .star4.clicked {
+            fill: rgb(240, 199, 65);
+        }
+        </style>
     <script src="https://cdn.tailwindcss.com">
        
     </script>
@@ -66,6 +88,7 @@
     </div>
   </nav>
   
+
  
     <main class="flex justify-between">
         <article class="w-full max-w-6xl mx-auto p-8 bg-white shadow-lg">
@@ -73,9 +96,9 @@
           <main class="flex justify-between">
             <article class="w-full max-w-6xl mx-auto p-8 bg-white shadow-lg">
               
-                <div class="min-h-screen dark:bg-slate-800  flex items-center justify-start -mt-80 -mb-72">
+                <div class="400-h-screen dark:bg-slate-800  flex items-center justify-start -mt-8 -mb-4">
                     <div
-                      class="bg-gray-100 dark:bg-gray-700 relative shadow-xl overflow-hidden hover:shadow-2xl group rounded-xl p-5 transition-all duration-500 transform">
+                      class="bg-gray-100 dark:bg-gray-700 relative shadow-xl  group rounded-xl p-0 transition-all duration-500 transform">
                       <div class="flex items-center gap-4">
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxhdmF0YXJ8ZW58MHwwfHx8MTY5MTg0NzYxMHww&ixlib=rb-4.0.3&q=80&w=1080"
                         class="w-20 h-20  object-center object-cover rounded-full transition-all duration-500 delay-500 transform"
@@ -91,22 +114,7 @@
                           </a>
                         </div>
                       </div>
-                      <div class="absolute bottom-1  -bottom-16 transition-all duration-500 bg-gray-600 dark:bg-gray-100 right-1 rounded-lg">
-                        <div class="flex justify-evenly items-center gap-2 p-1 text-2xl text-white dark:text-gray-600">
-                          <svg viewBox="0 0 1024 1024" fill="currentColor" height="1em" width="1em">
-                            <path
-                              d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm215.3 337.7c.3 4.7.3 9.6.3 14.4 0 146.8-111.8 315.9-316.1 315.9-63 0-121.4-18.3-170.6-49.8 9 1 17.6 1.4 26.8 1.4 52 0 99.8-17.6 137.9-47.4-48.8-1-89.8-33-103.8-77 17.1 2.5 32.5 2.5 50.1-2a111 111 0 01-88.9-109v-1.4c14.7 8.3 32 13.4 50.1 14.1a111.13 111.13 0 01-49.5-92.4c0-20.7 5.4-39.6 15.1-56a315.28 315.28 0 00229 116.1C492 353.1 548.4 292 616.2 292c32 0 60.8 13.4 81.1 35 25.1-4.7 49.1-14.1 70.5-26.7-8.3 25.7-25.7 47.4-48.8 61.1 22.4-2.4 44-8.6 64-17.3-15.1 22.2-34 41.9-55.7 57.6z" />
-                          </svg>
-                          <svg fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
-                            <path
-                              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                          </svg>
-                          <svg viewBox="0 0 960 1000" fill="currentColor" height="1em" width="1em">
-                            <path
-                              d="M480 20c133.333 0 246.667 46.667 340 140s140 206.667 140 340c0 132-46.667 245-140 339S613.333 980 480 980c-132 0-245-47-339-141S0 632 0 500c0-133.333 47-246.667 141-340S348 20 480 20M362 698V386h-96v312h96m-48-352c34.667 0 52-16 52-48s-17.333-48-52-48c-14.667 0-27 4.667-37 14s-15 20.667-15 34c0 32 17.333 48 52 48m404 352V514c0-44-10.333-77.667-31-101s-47.667-35-81-35c-44 0-76 16.667-96 50h-2l-6-42h-84c1.333 18.667 2 52 2 100v212h98V518c0-12 1.333-20 4-24 8-25.333 24.667-38 50-38 32 0 48 22.667 48 68v174h98" />
-                          </svg>
-                        </div>
-                      </div>
+                      
                     </div>
                 <div class="flex items-center gap-4 ml-auto">
                   <!-- Social media icons -->
@@ -304,120 +312,285 @@
                   <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Flow</dt>
                   <dd class="flex items-center mb-4">
                     
-                      <div class="flex items-center space-x-1">
-                        <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <div class="flex items-center space-x-1" id="star-container">
+                        <svg class="w-6 h-4 text-yellow-300 ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                         </svg>
-                        <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                        <svg class="w-6 h-4 text-yellow-300 ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                         </svg>
-                        <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                        <svg class="w-6 h-4 text-yellow-300 ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                         </svg>
-                        <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                        <svg class="w-6 h-4 text-yellow-300 ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                         </svg>
-                        <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                        <svg class="w-6 h-4 text-yellow-300 ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                         </svg>
+                        
                         
                       </div>
                       <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
                   </dd>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const stars = document.querySelectorAll('.star');
+                
+                        stars.forEach((star, index) => {
+                            star.addEventListener('mouseenter', () => {
+                                fillStars(index);
+                            });
+                
+                            star.addEventListener('mouseleave', () => {
+                                const clickedStarIndex = parseInt(localStorage.getItem('clickedStarIndex'));
+                                if (clickedStarIndex !== undefined ) {
+                                    fillStars(clickedStarIndex);
+                                } else {
+                                    clearStars();
+                                }
+                            });
+                
+                            star.addEventListener('click', () => {
+                                localStorage.setItem('clickedStarIndex', index);
+                                fillStars(index);
+                            });
+                        });
+                
+                        function fillStars(index) {
+                            stars.forEach((star, i) => {
+                                if (i <= index) {
+                                    star.classList.add('clicked');
+                                } else {
+                                    star.classList.remove('clicked');
+                                }
+                            });
+                        }
+                
+                        function clearStars() {
+                            stars.forEach((star) => {
+                                star.classList.remove('clicked');
+                            });
+                        }
+                    });
+                </script>
               </dl>
               <dl>
                 <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Accuracy</dt>
                 <dd class="flex items-center mb-4">
                   
-                    <div class="flex items-center space-x-1">
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                    <div class="flex items-center space-x-1" id="star-container">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
                       
                     </div>
                     <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
                 </dd>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const stars = document.querySelectorAll('.star1');
+                
+                        stars.forEach((star, index) => {
+                            star.addEventListener('mouseenter', () => {
+                                fillStars(index);
+                            });
+                
+                            star.addEventListener('mouseleave', () => {
+                                const clickedStarIndex = parseInt(localStorage.getItem('clickedStarIndex'));
+                                if (clickedStarIndex !== undefined) {
+                                    fillStars(clickedStarIndex);
+                                } else {
+                                    clearStars();
+                                }
+                            });
+                
+                            star.addEventListener('click', () => {
+                                localStorage.setItem('clickedStarIndex', index);
+                                fillStars(index);
+                            });
+                        });
+                
+                        function fillStars(index) {
+                            stars.forEach((star, i) => {
+                                if (i <= index) {
+                                    star.classList.add('clicked');
+                                } else {
+                                    star.classList.remove('clicked');
+                                }
+                            });
+                        }
+                
+                        function clearStars() {
+                            stars.forEach((star) => {
+                                star.classList.remove('clicked');
+                            });
+                        }
+                    });
+                </script>
             </dl>
             <dl>
                 <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Context</dt>
                 <dd class="flex items-center mb-4">
                   
                     <div class="flex items-center space-x-1">
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
                       
                     </div>
                     <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
                 </dd>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const stars = document.querySelectorAll('.star2');
+                
+                        stars.forEach((star, index) => {
+                            star.addEventListener('mouseenter', () => {
+                                fillStars(index);
+                            });
+                
+                            star.addEventListener('mouseleave', () => {
+                                const clickedStarIndex = parseInt(localStorage.getItem('clickedStarIndex'));
+                                if (clickedStarIndex !== undefined) {
+                                    fillStars(clickedStarIndex);
+                                } else {
+                                    clearStars();
+                                }
+                            });
+                
+                            star.addEventListener('click', () => {
+                                localStorage.setItem('clickedStarIndex', index);
+                                fillStars(index);
+                            });
+                        });
+                
+                        function fillStars(index) {
+                            stars.forEach((star, i) => {
+                                if (i <= index) {
+                                    star.classList.add('clicked');
+                                } else {
+                                    star.classList.remove('clicked');
+                                }
+                            });
+                        }
+                
+                        function clearStars() {
+                            stars.forEach((star) => {
+                                star.classList.remove('clicked');
+                            });
+                        }
+                    });
+                </script>
             </dl>
             <dl>
                 <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Transparency</dt>
                 <dd class="flex items-center mb-4">
                   
                     <div class="flex items-center space-x-1">
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
                       
                     </div>
                     <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
                 </dd>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const stars = document.querySelectorAll('.star3');
+                
+                        stars.forEach((star, index) => {
+                            star.addEventListener('mouseenter', () => {
+                                fillStars(index);
+                            });
+                
+                            star.addEventListener('mouseleave', () => {
+                                const clickedStarIndex = parseInt(localStorage.getItem('clickedStarIndex'));
+                                if (clickedStarIndex !== undefined) {
+                                    fillStars(clickedStarIndex);
+                                } else {
+                                    clearStars();
+                                }
+                            });
+                
+                            star.addEventListener('click', () => {
+                                localStorage.setItem('clickedStarIndex', index);
+                                fillStars(index);
+                            });
+                        });
+                
+                        function fillStars(index) {
+                            stars.forEach((star, i) => {
+                                if (i <= index) {
+                                    star.classList.add('clicked');
+                                } else {
+                                    star.classList.remove('clicked');
+                                }
+                            });
+                        }
+                
+                        function clearStars() {
+                            stars.forEach((star) => {
+                                star.classList.remove('clicked');
+                            });
+                        }
+                    });
+                </script>
             </dl>
             <dl>
                 <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Satisfaction</dt>
                 <dd class="flex items-center mb-3">
                   
                     <div class="flex items-center space-x-1">
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300  ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow-300  ms-1 star4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
                       
@@ -425,6 +598,47 @@
                     <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
                     
                 </dd>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const stars = document.querySelectorAll('.star4');
+                
+                        stars.forEach((star, index) => {
+                            star.addEventListener('mouseenter', () => {
+                                fillStars(index);
+                            });
+                
+                            star.addEventListener('mouseleave', () => {
+                                const clickedStarIndex = parseInt(localStorage.getItem('clickedStarIndex'));
+                                if (clickedStarIndex !== undefined) {
+                                    fillStars(clickedStarIndex);
+                                } else {
+                                    clearStars();
+                                }
+                            });
+                
+                            star.addEventListener('click', () => {
+                                localStorage.setItem('clickedStarIndex', index);
+                                fillStars(index);
+                            });
+                        });
+                
+                        function fillStars(index) {
+                            stars.forEach((star, i) => {
+                                if (i <= index) {
+                                    star.classList.add('clicked');
+                                } else {
+                                    star.classList.remove('clicked');
+                                }
+                            });
+                        }
+                
+                        function clearStars() {
+                            stars.forEach((star) => {
+                                star.classList.remove('clicked');
+                            });
+                        }
+                    });
+                </script>
                 <div class="flex justify-center pr-80 mt-8">
                     <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                         Submit Rating
