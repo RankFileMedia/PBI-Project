@@ -1,6 +1,3 @@
-document.getElementById("customer").onclick = function () {
-        location.href = "./signIn.html";
-};
 function previewProfilePhoto(event) {
         const input = event.target;
         const preview = document.getElementById('profilePhotoPreview');
@@ -19,3 +16,9 @@ function previewProfilePhoto(event) {
           preview.classList.add('hidden');
         }
       }
+
+
+function moveContinue(){
+        console.log("continue");
+        location.href = "./signInReporterContact.html";
+}

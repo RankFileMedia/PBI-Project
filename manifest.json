@@ -1,7 +1,7 @@
 {
     "name": "RankFileMedia",
     "short_name": "RankFileMedia",
-    "start_url": "index.html",
+    "start_url": "main.html",
     "display": "standalone",
     "background_color": "#fdfdfd",
     "theme_color": "#db4938",
