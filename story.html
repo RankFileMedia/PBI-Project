@@ -35,58 +35,59 @@
 <body class="bg-gray-100">
 
 
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="main.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="images/icons/100.png" class="h-8" alt="Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">RankFileMedia</span>
-    </a>
-    <div class="flex md:order-2">
-      <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-        </svg>
-        <span class="sr-only">Search</span>
-      </button>
-      <div class="relative hidden md:block">
-        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-          </svg>
-          <span class="sr-only">Search icon</span>
-        </div>
-        <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
-      </div>
-      <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-      </button>
-    </div>
-      <div class="items-center justify-center hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
-        <div class="relative mt-3 md:hidden">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-screen-xl flex flex-initial mx-auto p-4">
+        <a href="main.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="images/icons/100.png" class="h-8" alt="Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">RankFileMedia</span>
+        </a>
+        <div class="flex flex-auto pl-40 pr-40 md:order-1">
+          <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
             </svg>
+            <span class="sr-only">Search</span>
+          </button>
+          <div class="relative hidden md:block flex-auto">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+              </svg>
+              <span class="sr-only">Search icon</span>
+            </div>
+            <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
           </div>
-          <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+          <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
         </div>
-        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+          <div class="items-center justify-center hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+            <div class="relative mt-3 md:hidden">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>
+              </div>
+              <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+            </div>
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="/main.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+              </li>
+              <li>
+                <button class="modal-open block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Login</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
   
 
  
@@ -96,20 +97,20 @@
           <main class="flex justify-between">
             <article class="w-full max-w-6xl mx-auto p-8 bg-white shadow-lg">
               
-                <div class="400-h-screen dark:bg-slate-800  flex items-center justify-start -mt-8 -mb-4">
+                <div class="400-h-screen  flex items-center justify-start -mt-8 -mb-4">
                     <div
-                      class="bg-gray-100 dark:bg-gray-700 relative shadow-xl  group rounded-xl p-0 transition-all duration-500 transform">
+                      class="bg-gray-100  relative shadow-xl  group rounded-xl p-0 transition-all duration-500 transform">
                       <div class="flex items-center gap-4">
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxhdmF0YXJ8ZW58MHwwfHx8MTY5MTg0NzYxMHww&ixlib=rb-4.0.3&q=80&w=1080"
                         class="w-20 h-20  object-center object-cover rounded-full transition-all duration-500 delay-500 transform"
                       />
                         <div class="w-fit transition-all transform duration-500">
-                          <h1 class="text-gray-600 dark:text-gray-200 font-bold">
+                          <h1 class="text-gray-600  font-bold">
                             Mary Phiri
                           </h1>
                           <p class="text-gray-400">updated 22:34 GMT April 04,2024</p>
                           <a
-                            class="text-xs text-gray-500 dark:text-gray-200 ">
+                            class="text-xs text-gray-500 ">
                             mary@gmail.com
                           </a>
                         </div>
@@ -243,36 +244,36 @@
                 </div>
             </div>
             
-            <section class="bg-white dark:bg-gray-900 py-8 lg:py-16 antialiased -mb-14">
+            <section class="bg-white py-8 lg:py-16 antialiased -mb-14">
                 <div class="max-w-2xl mx-auto px-4">
                     <div class="flex justify-between items-center mb-6">
-                      <h2 class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">Article Ratings</h2>
+                      <h2 class="text-lg lg:text-2xl font-bold text-gray-900 ">Article Ratings</h2>
                   </div>
           <div class="flex items-center mb-5">
-            <p class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800">4.9</p>
-            <p class="ms-2 font-medium text-gray-900 dark:text-white">Excellent</p>
-            <span class="w-1 h-1 mx-2 bg-gray-900 rounded-full dark:bg-gray-500"></span>
-            <p class="text-sm font-medium text-gray-500 dark:text-gray-400">376 reviews</p>
+            <p class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded">4.9</p>
+            <p class="ms-2 font-medium text-gray-900 ">Excellent</p>
+            <span class="w-1 h-1 mx-2 bg-gray-900 rounded-full"></span>
+            <p class="text-sm font-medium text-gray-500  ">376 reviews</p>
           </section>
         </div>
         <div class="gap-40 sm:grid sm:grid-cols-2">
             <div class="justify-right items-right pl-72">
                 <dl>
-                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Flow</dt>
+                    <dt class="text-sm font-medium text-gray-500">Flow</dt>
                     <dd class="flex items-center mb-3">
-                        <div class="w-80 bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                            <div class="bg-yellow-400 h-2.5 rounded dark:bg-blue-500" style="width: 88%"></div>
+                        <div class="w-80 bg-gray-200 rounded h-2.5 me-2">
+                            <div class="bg-yellow-400 h-2.5 rounded " style="width: 88%"></div>
                         </div>
-                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4.7</span>
+                        <span class="text-sm font-medium text-gray-500 ">4.7</span>
                     </dd>
                 </dl>
                 <dl>
-                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Accuracy</dt>
+                    <dt class="text-sm font-medium text-gray-500 ">Accuracy</dt>
                     <dd class="flex items-center mb-3">
-                        <div class="w-60 bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
-                            <div class="bg-yellow-400 h-2.5 rounded dark:bg-blue-500" style="width: 89%"></div>
+                        <div class="w-60 bg-gray-200 rounded h-2.5 me-2">
+                            <div class="bg-yellow-400 h-2.5 rounded " style="width: 89%"></div>
                         </div>
-                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4.3</span>
+                        <span class="text-sm font-medium text-gray-500 ">4.3</span>
                     </dd>
                 </dl>
                 <dl>
@@ -648,26 +649,26 @@
           
       
         </div>
-          <section class="bg-white dark:bg-gray-900 py-8 lg:py-16 antialiased">
+          <section class="bg-white py-8 lg:py-16 antialiased">
             <div class="max-w-2xl mx-auto px-4">
                 <div class="flex justify-between items-center mb-6">
-                  <h2 class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">Comments (3)</h2>
+                  <h2 class="text-lg lg:text-2xl font-bold text-gray-900">Comments (3)</h2>
               </div>
               <form class="mb-6">
-                  <div class="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+                  <div class="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200">
                       <label for="comment" class="sr-only">Your comment</label>
                       <textarea id="comment" rows="6"
-                          class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
+                          class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none"
                           placeholder="Write a comment..." required></textarea>
                   </div>
                   <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
         Post comment
 </button>
               </form>
-              <article class="p-6 text-base bg-white rounded-lg dark:bg-gray-900">
+              <article class="p-6 text-base bg-white rounded-lg">
                   <footer class="flex justify-between items-center mb-2">
                       <div class="flex items-center">
-                          <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold"><img
+                          <p class="inline-flex items-center mr-3 text-sm text-gray-900 font-semibold"><img
                                   class="mr-2 w-6 h-6 rounded-full"
                                   src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
                                   alt="Michael Gough">Michael Gough</p>
@@ -675,7 +676,7 @@
                                   title="February 8th, 2022">Feb. 8, 2022</time></p>
                       </div>
                       <button id="dropdownComment1Button" data-dropdown-toggle="dropdownComment1"
-                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50"
                           type="button">
                           <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
                               <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
@@ -684,34 +685,34 @@
                       </button>
                       <!-- Dropdown menu -->
                       <div id="dropdownComment1"
-                          class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                          <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                          class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow">
+                          <ul class="py-1 text-sm text-gray-700 "
                               aria-labelledby="dropdownMenuIconHorizontalButton">
                               <li>
                                   <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                                      class="block py-2 px-4 hover:bg-gray-100">Edit</a>
                               </li>
                               <li>
                                   <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                                      class="block py-2 px-4 hover:bg-gray-100">Remove</a>
                               </li>
                               <li>
                                   <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                                      class="block py-2 px-4 hover:bg-gray-100">Report</a>
                               </li>
                           </ul>
                       </div>
                   </footer>
-                  <p class="text-gray-500 dark:text-gray-400">Very straight-to-point article. Really worth time reading. Thank you! But tools are just the
+                  <p class="text-gray-500">Very straight-to-point article. Really worth time reading. Thank you! But tools are just the
                       instruments for the UX designers. The knowledge of the design tools are as important as the
                       creation of the design strategy.</p>
                   
               </article>
              
-              <article class="p-6 mb-3 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+              <article class="p-6 mb-3 text-base bg-white border-t border-gray-200">
                   <footer class="flex justify-between items-center mb-2">
                       <div class="flex items-center">
-                          <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold"><img
+                          <p class="inline-flex items-center mr-3 text-sm text-gray-900 font-semibold"><img
                                   class="mr-2 w-6 h-6 rounded-full"
                                   src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
                                   alt="Bonnie Green">Bonnie Green</p>
@@ -719,7 +720,7 @@
                                   title="March 12th, 2022">Mar. 12, 2022</time></p>
                       </div>
                       <button id="dropdownComment3Button" data-dropdown-toggle="dropdownComment3"
-                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-40 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-40 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50"
                           type="button">
                           <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
                               <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
@@ -728,39 +729,39 @@
                       </button>
                       <!-- Dropdown menu -->
                       <div id="dropdownComment3"
-                          class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                          <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                          class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow ">
+                          <ul class="py-1 text-sm text-gray-700 "
                               aria-labelledby="dropdownMenuIconHorizontalButton">
                               <li>
                                   <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                                      class="block py-2 px-4 hover:bg-gray-100">Edit</a>
                               </li>
                               <li>
                                   <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                                      class="block py-2 px-4 hover:bg-gray-100">Remove</a>
                               </li>
                               <li>
                                   <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                                      class="block py-2 px-4 hover:bg-gray-100">Report</a>
                               </li>
                           </ul>
                       </div>
                   </footer>
-                  <p class="text-gray-500 dark:text-gray-400">The article covers the essentials, challenges, myths and stages the UX designer should consider while creating the design strategy.</p>
+                  <p class="text-gray-500 ">The article covers the essentials, challenges, myths and stages the UX designer should consider while creating the design strategy.</p>
                   
               </article>
-              <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+              <article class="p-6 text-base bg-white border-t border-gray-200">
                   <footer class="flex justify-between items-center mb-2">
                       <div class="flex items-center">
-                          <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold"><img
+                          <p class="inline-flex items-center mr-3 text-sm text-gray-900 font-semibold"><img
                                   class="mr-2 w-6 h-6 rounded-full"
                                   src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
                                   alt="Helene Engels">Helene Engels</p>
-                          <p class="text-sm text-gray-600 dark:text-gray-400"><time pubdate datetime="2022-06-23"
+                          <p class="text-sm text-gray-600 "><time pubdate datetime="2022-06-23"
                                   title="June 23rd, 2022">Jun. 23, 2022</time></p>
                       </div>
                       <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4"
-                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-40 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50"
                           type="button">
                           <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
                               <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
@@ -768,25 +769,25 @@
                       </button>
                       <!-- Dropdown menu -->
                       <div id="dropdownComment4"
-                          class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                          <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                          class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow">
+                          <ul class="py-1 text-sm text-gray-700 "
                               aria-labelledby="dropdownMenuIconHorizontalButton">
                               <li>
                                   <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                                      class="block py-2 px-4 hover:bg-gray-100">Edit</a>
                               </li>
                               <li>
                                   <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                                      class="block py-2 px-4 hover:bg-gray-100">Remove</a>
                               </li>
                               <li>
                                   <a href="#"
-                                      class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                                      class="block py-2 px-4 hover:bg-gray-100">Report</a>
                               </li>
                           </ul>
                       </div>
                   </footer>
-                  <p class="text-gray-500 dark:text-gray-400">Thanks for sharing this. I do came from the Backend development and explored some of the tools to design my Side Projects.</p>
+                  <p class="text-gray-500">Thanks for sharing this. I do came from the Backend development and explored some of the tools to design my Side Projects.</p>
                   
               </article>
             </div>
