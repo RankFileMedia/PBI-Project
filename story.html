@@ -6,26 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Story</title>
     <style>
-        .star:hover,
-        .star.clicked {
-            fill: rgb(240, 199, 65);
-        }
-        .star1:hover,
-        .star1.clicked {
-            fill: rgb(240, 199, 65);
-        }
-        .star2:hover,
-        .star2.clicked {
-            fill: rgb(240, 199, 65);
-        }
-        .star3:hover,
-        .star3.clicked {
-            fill: rgb(240, 199, 65);
-        }
-        .star4:hover,
-        .star4.clicked {
-            fill: rgb(240, 199, 65);
-        }
+        
+       
+        .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
         
         </style>
     <script src="https://cdn.tailwindcss.com">
@@ -138,7 +147,7 @@
                         <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">out of</p>
                         <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
                     </div>
-                    <div class="flex items-center gap-1 ml-auto">
+                    <div class="flex items-center  ml-auto">
                         <!-- Social media icons -->
                         <a href="#" role="button" class="mx-2">
                             <!-- Facebook -->
@@ -220,11 +229,11 @@
                         });
                     });
                 </script>
-                <a href="#" role="button" class="mx-2" >
+                <a href="#" role="button" class="mx-2 mr-3" >
                     <button class="social-share__share" data-url="https://www.cnn.com/2020/04/28/us/arkansas-foodbank-distribution" data-type="copy" aria-label="copy link to clipboard" title="Copy link to clipboard">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
+                    class="h-8 w-8"
                     fill="currentColor"
                     style="color: #140c11"
                     viewBox="0 0 24 24">
@@ -337,35 +346,78 @@
         </div>
         <div class="gap-40 sm:grid sm:grid-cols-2">
             <div class="justify-right items-right pl-72">
-                <dl>
+                <dl class="flex items-center"> <!-- Added 'flex' and 'items-center' classes -->
                     <dt class="text-sm font-medium text-gray-500">Flow</dt>
+                    <div class="tooltip">
+                        <svg class="h-4 w-4 text-blue-500 ml-1 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                        </svg>
+                        <span class="tooltiptext">Is the article easy to follow and understand? Was it engaging?</span>
+                    </div>
+                    </dl>
+                    
                     <dd class="flex items-center mb-3">
                         <div class="w-80 bg-gray-200 rounded h-2.5 me-2">
                             <div class="bg-yellow-400 h-2.5 rounded " style="width: 88%"></div>
                         </div>
                         <span class="text-sm font-medium text-gray-500 ">4.7</span>
                     </dd>
+                
+                <dl class="flex items-center">
+                    <dt class="text-sm font-medium text-gray-500">Accuracy</dt>
+                    <div class="tooltip">
+                        <svg class="h-4 w-4 text-blue-500 ml-1 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                        </svg>
+                        <span class="tooltiptext">Did the author stick to the facts without sensationalizing of misrepresentation or overt obvious bias?</span>
+                    </div>
                 </dl>
-                <dl>
-                    <dt class="text-sm font-medium text-gray-500 ">Accuracy</dt>
+
                     <dd class="flex items-center mb-3">
                         <div class="w-60 bg-gray-200 rounded h-2.5 me-2">
                             <div class="bg-yellow-400 h-2.5 rounded " style="width: 89%"></div>
                         </div>
                         <span class="text-sm font-medium text-gray-500 ">4.3</span>
                     </dd>
+                
+                <dl class="flex items-center">
+                    <dt class="text-sm font-medium text-gray-500">Context</dt>
+                    <div class="tooltip">
+                        <svg class="h-4 w-4 text-blue-500 ml-1 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                        </svg>
+                        <span class="tooltiptext">Did the article offer depth, historical context and thoroughly explore the topic?</span>
+                    </div>
                 </dl>
-                <dl>
-                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Context</dt>
                     <dd class="flex items-center mb-3">
                         <div class="w-60 bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
                             <div class="bg-yellow-400 h-2.5 rounded dark:bg-blue-500" style="width: 88%"></div>
                         </div>
                         <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4.5</span>
                     </dd>
+               
+                <dl class="flex items-center">
+                    <dt class="text-sm font-medium text-gray-500">Transparency</dt>
+                    <div class="tooltip">
+                        <svg class="h-4 w-4 text-blue-500 ml-1 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                        </svg>
+                        <span class="tooltiptext">Was the article properly sourced with credible experts and represent a variety of opinions?</span>
+                    </div>
                 </dl>
-                <dl>
-                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Transparency</dt>
+
                     <dd class="flex items-center mb-3">
                         <div class="w-60 bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
                             <div class="bg-yellow-400 h-2.5 rounded dark:bg-blue-500" style="width: 54%"></div>
@@ -373,8 +425,19 @@
                         <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4.2</span>
                     </dd>
                 </dl>
-                <dl>
-                  <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Satisfaction</dt>
+                <dl class="flex items-center">
+                    <dt class="text-sm font-medium text-gray-500">Satisfaction</dt>
+                    <div class="tooltip">
+                        <svg class="h-4 w-4 text-blue-500 ml-1 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                        </svg>
+                        <span class="tooltiptext">Was the article properly sourced with credible experts and represent a variety of opinions?</span>
+                    </div>
+                </dl>
+
                   <dd class="flex items-center ">
                       <div class="w-60 bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
                           <div class="bg-yellow-400 h-2.5 rounded dark:bg-blue-500" style="width: 89%"></div>
@@ -393,19 +456,19 @@
                   <dd class="flex items-center mb-4">
                     
                       <div class="flex items-center space-x-1" id="star-container">
-                        <svg class="w-6 h-4 text-yellow-300 ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                        <svg class="w-6 h-4 text-yellow ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                         </svg>
-                        <svg class="w-6 h-4 text-yellow-300 ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                        <svg class="w-6 h-4 text-yellow ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                         </svg>
-                        <svg class="w-6 h-4 text-yellow-300 ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                        <svg class="w-6 h-4 text-yellow ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                         </svg>
-                        <svg class="w-6 h-4 text-yellow-300 ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                        <svg class="w-6 h-4 text-yellow ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                         </svg>
-                        <svg class="w-6 h-4 text-yellow-300 ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                        <svg class="w-6 h-4 text-yellow ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                             <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                         </svg>
                         
@@ -414,46 +477,22 @@
                       <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
                   </dd>
                   <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        const stars = document.querySelectorAll('.star');
-                
-                        stars.forEach((star, index) => {
-                            star.addEventListener('mouseenter', () => {
-                                fillStars(index);
-                            });
-                
-                            star.addEventListener('mouseleave', () => {
-                                const clickedStarIndex = parseInt(localStorage.getItem('clickedStarIndex'));
-                                if (clickedStarIndex !== undefined ) {
-                                    fillStars(clickedStarIndex);
-                                } else {
-                                    clearStars();
-                                }
-                            });
-                
-                            star.addEventListener('click', () => {
-                                localStorage.setItem('clickedStarIndex', index);
-                                fillStars(index);
-                            });
+                    // JavaScript 코드
+                    const stars = document.querySelectorAll('.star');
+                  
+                    stars.forEach((star, index) => {
+                      star.addEventListener('click', () => {
+                        stars.forEach((s, i) => {
+                          if (i <= index) {
+                            s.style.fill = 'yellow'; 
+                          } else {
+                            s.style.fill = 'gray'; 
+                          }
                         });
-                
-                        function fillStars(index) {
-                            stars.forEach((star, i) => {
-                                if (i <= index) {
-                                    star.classList.add('clicked');
-                                } else {
-                                    star.classList.remove('clicked');
-                                }
-                            });
-                        }
-                
-                        function clearStars() {
-                            stars.forEach((star) => {
-                                star.classList.remove('clicked');
-                            });
-                        }
+                      });
                     });
-                </script>
+                  </script>
+                </dl>
               </dl>
               <dl>
                 <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Accuracy</dt>
@@ -480,46 +519,21 @@
                     <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
                 </dd>
                 <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        const stars = document.querySelectorAll('.star1');
-                
-                        stars.forEach((star, index) => {
-                            star.addEventListener('mouseenter', () => {
-                                fillStars(index);
-                            });
-                
-                            star.addEventListener('mouseleave', () => {
-                                const clickedStarIndex = parseInt(localStorage.getItem('clickedStarIndex'));
-                                if (clickedStarIndex !== undefined) {
-                                    fillStars(clickedStarIndex);
-                                } else {
-                                    clearStars();
-                                }
-                            });
-                
-                            star.addEventListener('click', () => {
-                                localStorage.setItem('clickedStarIndex', index);
-                                fillStars(index);
-                            });
+                    // JavaScript 코드
+                    const stars1 = document.querySelectorAll('.star1');
+                  
+                    stars1.forEach((star, index) => {
+                      star.addEventListener('click', () => {
+                        stars1.forEach((s, i) => {
+                          if (i <= index) {
+                            s.style.fill = 'yellow'; 
+                          } else {
+                            s.style.fill = 'gray'; 
+                          }
                         });
-                
-                        function fillStars(index) {
-                            stars.forEach((star, i) => {
-                                if (i <= index) {
-                                    star.classList.add('clicked');
-                                } else {
-                                    star.classList.remove('clicked');
-                                }
-                            });
-                        }
-                
-                        function clearStars() {
-                            stars.forEach((star) => {
-                                star.classList.remove('clicked');
-                            });
-                        }
+                      });
                     });
-                </script>
+                  </script>
             </dl>
             <dl>
                 <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Context</dt>
@@ -546,65 +560,40 @@
                     <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
                 </dd>
                 <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        const stars = document.querySelectorAll('.star2');
-                
-                        stars.forEach((star, index) => {
-                            star.addEventListener('mouseenter', () => {
-                                fillStars(index);
-                            });
-                
-                            star.addEventListener('mouseleave', () => {
-                                const clickedStarIndex = parseInt(localStorage.getItem('clickedStarIndex'));
-                                if (clickedStarIndex !== undefined) {
-                                    fillStars(clickedStarIndex);
-                                } else {
-                                    clearStars();
-                                }
-                            });
-                
-                            star.addEventListener('click', () => {
-                                localStorage.setItem('clickedStarIndex', index);
-                                fillStars(index);
-                            });
+                    // JavaScript 코드
+                    const stars2 = document.querySelectorAll('.star2');
+                  
+                    stars2.forEach((star, index) => {
+                      star.addEventListener('click', () => {
+                        stars2.forEach((s, i) => {
+                          if (i <= index) {
+                            s.style.fill = 'yellow'; 
+                          } else {
+                            s.style.fill = 'gray'; 
+                          }
                         });
-                
-                        function fillStars(index) {
-                            stars.forEach((star, i) => {
-                                if (i <= index) {
-                                    star.classList.add('clicked');
-                                } else {
-                                    star.classList.remove('clicked');
-                                }
-                            });
-                        }
-                
-                        function clearStars() {
-                            stars.forEach((star) => {
-                                star.classList.remove('clicked');
-                            });
-                        }
+                      });
                     });
-                </script>
+                  </script>
             </dl>
             <dl>
                 <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Transparency</dt>
                 <dd class="flex items-center mb-4">
                   
                     <div class="flex items-center space-x-1">
-                      <svg class="w-6 h-4 text-yellow-300 ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
-                      <svg class="w-6 h-4 text-yellow-300 ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                      <svg class="w-6 h-4 text-yellow ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
                           <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                       </svg>
                       
@@ -612,47 +601,21 @@
                     <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
                 </dd>
                 <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        const stars = document.querySelectorAll('.star3');
-                
-                        stars.forEach((star, index) => {
-                            star.addEventListener('mouseenter', () => {
-                                fillStars(index);
-                            });
-                
-                            star.addEventListener('mouseleave', () => {
-                                const clickedStarIndex = parseInt(localStorage.getItem('clickedStarIndex'));
-                                if (clickedStarIndex !== undefined) {
-                                    fillStars(clickedStarIndex);
-                                } else {
-                                    clearStars();
-                                }
-                            });
-                
-                            star.addEventListener('click', () => {
-                                localStorage.setItem('clickedStarIndex', index);
-                                fillStars(index);
-                            });
+                    // JavaScript 코드
+                    const stars3 = document.querySelectorAll('.star3');
+                  
+                    stars3.forEach((star, index) => {
+                      star.addEventListener('click', () => {
+                        stars3.forEach((s, i) => {
+                          if (i <= index) {
+                            s.style.fill = 'yellow'; 
+                          } else {
+                            s.style.fill = 'gray'; 
+                          }
                         });
-                
-                        function fillStars(index) {
-                            stars.forEach((star, i) => {
-                                if (i <= index) {
-                                    star.classList.add('clicked');
-                                } else {
-                                    star.classList.remove('clicked');
-                                }
-                            });
-                        }
-                
-                        function clearStars() {
-                            stars.forEach((star) => {
-                                star.classList.remove('clicked');
-                            });
-                        }
+                      });
                     });
-                    sd
-                </script>
+                  </script>
             </dl>
             <dl>
                 <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Satisfaction</dt>
@@ -680,46 +643,21 @@
                     
                 </dd>
                 <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        const stars = document.querySelectorAll('.star4');
-                
-                        stars.forEach((star, index) => {
-                            star.addEventListener('mouseenter', () => {
-                                fillStars(index);
-                            });
-                
-                            star.addEventListener('mouseleave', () => {
-                                const clickedStarIndex = parseInt(localStorage.getItem('clickedStarIndex'));
-                                if (clickedStarIndex !== undefined) {
-                                    fillStars(clickedStarIndex);
-                                } else {
-                                    clearStars();
-                                }
-                            });
-                
-                            star.addEventListener('click', () => {
-                                localStorage.setItem('clickedStarIndex', index);
-                                fillStars(index);
-                            });
+                    // JavaScript 코드
+                    const stars4 = document.querySelectorAll('.star4');
+                  
+                    stars4.forEach((star, index) => {
+                      star.addEventListener('click', () => {
+                        stars4.forEach((s, i) => {
+                          if (i <= index) {
+                            s.style.fill = 'yellow'; 
+                          } else {
+                            s.style.fill = 'gray'; 
+                          }
                         });
-                
-                        function fillStars(index) {
-                            stars.forEach((star, i) => {
-                                if (i <= index) {
-                                    star.classList.add('clicked');
-                                } else {
-                                    star.classList.remove('clicked');
-                                }
-                            });
-                        }
-                
-                        function clearStars() {
-                            stars.forEach((star) => {
-                                star.classList.remove('clicked');
-                            });
-                        }
+                      });
                     });
-                </script>
+                  </script>
                 <div class="flex justify-center pr-80 mt-8">
                     
                     
