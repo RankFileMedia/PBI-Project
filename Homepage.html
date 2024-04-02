@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RankFileMedia</title>
+    <style>
+        body {
+            font-family: "Trebuchet MS", sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        .article:nth-child(odd) {
+            margin-right: 20px;
+        }
+        .reporters-section {
+            width: 22%;
+            margin-right: -25px;
+            margin-left: auto;
+        }
+
+        header {
+            padding: 10px;
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .header-categories {
+            font-weight: bold;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .header-categories a {
+            text-decoration: none;
+            color: #333333;
+            margin: 0 20px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .header-categories a:hover {
+            color: #666666;
+        }
+        .header-categories a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background-color: #cccccc;
+            transition: transform 0.3s ease;
+        }
+        .header-categories a:hover::before {
+            transform: translateX(-50%) scaleX(1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .main-content {
+            width: 80%;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .article {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+        }
+        .article-title {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .author {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 5px;
+        }
+        .rating {
+            font-size: 16px;
+            color: #ffcc00;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .search-bar input[type="text"] {
+            border: 2px solid #cccccc;
+            border-radius: 20px;
+            padding: 8px 15px;
+            font-size: 16px;
+            color: #333333;
+        }
+        .search-bar input[type="text"]::placeholder {
+            color: #999999;
+        }
+        .header-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .header-icon {
+            margin-left: 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: transform 0.3s ease; /* Add transition for smooth animation */
+        }
+        .header-icon:hover {
+            transform: scale(1.1); /* Enlarge the icon slightly on hover */
+        }
+        .reporters-list {
+            list-style: none;
+            padding: 0;
+        }
+        .reporter {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .reporter-image {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .reporter-name {
+            margin: 0;
+            padding: 5px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .reporter-name:hover {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    /* New CSS code for the hover effect */
+    .article:hover .article-image,
+    .article:hover .article-title {
+        transform: scale(1.1); /* Enlarge the article image and title */
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C6DACCBC-CFBE-49DF-A759-8C4EB09E206A.png" 
+        width="110" height="110">
+        <h1>RankFileMedia</h1>
+        <div class="header-categories">
+            <a href="#">Home</a>
+            <a href="#">Newsrooms</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+        </div>
+        <div class="header-icons">
+            <img src="2200426A-FAA0-423A-A4EE-CE1A2E465EE3.png" width="55" height="55" class="header-icon">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+    <div class="container">
+        <!-- Vertical border -->
+        <div class="vertical-border"></div>
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Article 1 -->
+            <div class="article">
+                <h2>Your News Feed</h2>
+                <img src="https://static01.nyt.com/images/2024/03/26/multimedia/26russia-torture-1-fwzq/26russia-torture-1-fwzq-jumbo.jpg?quality=75&auto=webp"
+                class="article-image" width="450" height="250">
+                <h2 class="article-title">Display of Battered Men Was Russia’s Warning to the Public, Analysts Say</h2>
+                <p class="author">Valerie Hopkins & Neil MacFarquhar | The New York Times</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article">
+                <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-860w,f_auto,q_auto:best/rockcms/2024-03/240320-mcr-kidney-transplant-inline-ac-547p-ce0c0f.jpg"
+                class="article-image" width="450" height="250">
+                <h2 class="article-title">In a first, surgeons successfully transplant a pig kidney into a man</h2>
+                <p class="author">Berkeley Lovelace Jr. and Patrick Martin | NBC</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+
+            <div class="article">
+                <img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/3840/production/_133000441_metrokyiv.png.webp"
+                class="article-image" width="450" height="250">
+                <h2 class="article-title">Ukraine war: Two Russian landing ships hit off Crimea, officials say</h2>
+                <p class="author">James Gregory & Paulin Kola | BBC</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article">
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/2024-03-24t201819z-1400983683-rc2js6a3f3if-rtrmadp-3-russia-shooting-suspects-court-2.jpg?q=w_1110,c_fill/f_webp"
+                class="article-image" width="450" height="250">
+                <h2 class="article-title">Moscow concert hall attack suspects appear in court as Russia defends security services</h2>
+                <p class="author">Christian Edwards, Masha Angelova, Josh Pennington and Anna Chernova | CNN</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+
+            <div class="article">
+                <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/LF6Z3GTB2QH5DA4BORXNN2Y7OQ.jpg&w=1200"
+                class="article-image" width="450" height="250">
+                <h2 class="article-title">Putin says ‘radical Islamists’ attacked concert hall, suggests link to Ukraine</h2>
+                <p class="author">Mary Ilyushina | Washington Times</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article">
+                <img src="https://d3i6fh83elv35t.cloudfront.net/static/2024/03/transplant-1024x683.jpg"
+                class="article-image" width="450" height="250">
+                <h2 class="article-title">Transplant of pig kidney into a human marks medical milestone</h2>
+                <p class="author">William Brangham | PBS News Hour</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+            </div>
+            <!-- Repeat for more articles -->
+            
+        </div>
+        <!-- News Reporters Section -->
+        <div class="reporters-section">
+            <h2>Your News Reporters</h2>
+            <ul class="reporters-list">
+                <li class="reporter">
+                    <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_focal-230x230,f_auto,q_auto:best/newscms/2023_08/3595665/berkeley-lovelace-byline-jm-1.jpg" 
+                    alt="Reporter 1" class="reporter-image">
+                    <p class="reporter-name">Berkeley Lovelace Jr.</p>
+                </li>
+                <li class="reporter">
+                    <img src="https://static01.nyt.com/images/2018/10/15/multimedia/author-neil-macfarquhar/author-neil-macfarquhar-thumbLarge-v2.png" 
+                    alt="Reporter 2" class="reporter-image">
+                    <p class="reporter-name">Neil MacFarquhar</p>
+                </li>
+                <li class="reporter">
+                    <img src="https://d3i6fh83elv35t.cloudfront.net/static/2014/04/William-Brangham.-PBS-NewsHour-crop-425x532.jpg" 
+                    alt="Reporter 3" class="reporter-image">
+                    <p class="reporter-name">William Brangham</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
