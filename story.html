@@ -17,7 +17,7 @@
     .tooltip .tooltiptext {
         visibility: hidden;
         width: 200px;
-        background-color: #555;
+        background-color: #f0cf40;
         color: #fff;
         text-align: center;
         border-radius: 6px;
@@ -484,7 +484,7 @@
                       star.addEventListener('click', () => {
                         stars.forEach((s, i) => {
                           if (i <= index) {
-                            s.style.fill = 'yellow'; 
+                            s.style.fill = '#f0cf40'; 
                           } else {
                             s.style.fill = 'gray'; 
                           }
@@ -526,7 +526,7 @@
                       star.addEventListener('click', () => {
                         stars1.forEach((s, i) => {
                           if (i <= index) {
-                            s.style.fill = 'yellow'; 
+                            s.style.fill = '#f0cf40'; 
                           } else {
                             s.style.fill = 'gray'; 
                           }
@@ -567,7 +567,7 @@
                       star.addEventListener('click', () => {
                         stars2.forEach((s, i) => {
                           if (i <= index) {
-                            s.style.fill = 'yellow'; 
+                            s.style.fill = '#f0cf40'; 
                           } else {
                             s.style.fill = 'gray'; 
                           }
@@ -608,7 +608,7 @@
                       star.addEventListener('click', () => {
                         stars3.forEach((s, i) => {
                           if (i <= index) {
-                            s.style.fill = 'yellow'; 
+                            s.style.fill = '#f0cf40'; 
                           } else {
                             s.style.fill = 'gray'; 
                           }
@@ -650,7 +650,7 @@
                       star.addEventListener('click', () => {
                         stars4.forEach((s, i) => {
                           if (i <= index) {
-                            s.style.fill = 'yellow'; 
+                            s.style.fill = '#f0cf40'; 
                           } else {
                             s.style.fill = 'gray'; 
                           }
@@ -676,9 +676,11 @@
                                 if (confirm("Once you submit the rating, you are not allowed to change it. Do you still want to confirm the rating for this article?")) {
                                     // If user confirms, display a thank you message
                                     alert("Thanks for rating this article.");
-                    
+                        
                                     // Disable the button
                                     this.disabled = true;
+                                    // Change the text of the button to "Rated"
+                                    this.textContent = "Rated";
                                 }
                             }
                         });
