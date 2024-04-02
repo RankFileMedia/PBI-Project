@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin-left: 300px;
+      margin-right: 300px;
+      margin-top: 40px;
+    }
+
+    .header-container {
+      margin-left: 0;
+      margin-right: 0;
+      background-color: #fffdfd;
+      padding: 20px;
+    }
+
+    .search-container {
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .search-input {
+      width: calc(100% - 130px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .search-button {
+      padding: 10px 20px;
+      background-color: #0726f4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .person {
+      border-bottom: 1px solid #ccc;
+      padding: 20px;
+      display: flex;
+      align-items: center; /* Align items vertically */
+    }
+
+    .person:last-child {
+      border-bottom: none; /* Remove border bottom for the last person */
+    }
+
+    .person-name {
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .person-description {
+      margin-top: 5px;
+      color: #777;
+      margin-left: 10px;
+    }
+
+    .follow-button, .contact-button {
+      padding: 8px 15px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: auto; /* Push buttons to the right */
+    }
+
+    .follow-button {
+      margin-right: 5px; /* Adjust margin between buttons */
+    }
+
+    .profile-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .back-btn {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    .logo img {
+      width: 150px; /* Change the width as per your requirement */
+      height: auto; /* Maintain aspect ratio */
+      margin-top: 30px;
+      margin-left: 600px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-container">
+    <a href="search.html" class="back-btn">Back</a>
+    <a href="#" class="logo"><img src="images/icons/logo.png" alt="Logo"></a>
+  </div>
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search...">
+    <button class="search-button">Search</button>
+  </div>
+
+  <div class="results-container">
+    <div class="person">
+     
+        <img class="profile-pic" src="./images/Contessa.png" alt="Profile Picture">
+        <div>
+          <div class="person-name">Contessa Brewer</div>
+          <div class="person-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero at ultrices laoreet.</div>
+        </div>
+      
+      <button class="follow-button">Follow</button>
+      <button class="contact-button">Contact</button>
+    </div>
+  </div>
+
+  <div class="results-container">
+    <div class="person">
+      <img class="profile-pic" src="./images/Caleb.png" alt="Profile Picture">
+      <div>
+        <div class="person-name">Caleb Anderson</div>
+        <div class="person-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero at ultrices laoreet.</div>
+      </div>
+      <button class="follow-button">Follow</button>
+      <button class="contact-button">Contact</button>
+    </div>
+
+    <div class="results-container">
+      <div class="person">
+        <img class="profile-pic" src="./images/Dylan.png" alt="Profile Picture">
+        <div>
+          <div class="person-name">Dylan Turner</div>
+          <div class="person-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero at ultrices laoreet.</div>
+        </div>
+        <button class="follow-button">Follow</button>
+        <button class="contact-button">Contact</button>
+      </div>
+
+      <div class="results-container">
+        <div class="person">
+          <img class="profile-pic" src="./images/Mason.png" alt="Profile Picture">
+          <div>
+            <div class="person-name">John Doe</div>
+            <div class="person-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero at ultrices laoreet.</div>
+          </div>
+          <button class="follow-button">Follow</button>
+          <button class="contact-button">Contact</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
