@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your New Project</title>
+    <style>
+        body {
+            font-family: "Trebuchet MS", sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Define styles for the grey panel */
+        .grey-panel {
+            position: fixed;
+            top: 130.9px;
+            left: 0;
+            height: 100%;
+            width: 240px;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .grey-panel h2 {
+            font-weight: normal;
+        }
+
+        /* Style for the Main Feed option */
+        .main-feed-option,
+        .grey-panel div:hover {
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .main-feed-option:hover,
+        .grey-panel div:hover {
+            background-color: #dddddd;
+        }
+
+        .grey-panel .user-profile .username {
+            font-weight: normal;
+        }
+
+        header {
+            padding: 10px;
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+            position: relative;
+        }
+
+        #newsroom-display {
+            position: fixed;
+            top: 25%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            font-size: 24px;
+            text-align: left;
+        }
+
+        .header-categories a {
+            text-decoration: none;
+            color: #333333;
+            margin: 0 20px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .header-categories a:hover {
+            color: #666666;
+        }
+
+        .header-categories a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background-color: #cccccc;
+            transition: transform 0.3s ease;
+        }
+
+        .header-categories a:hover::before {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .search-bar input[type="text"] {
+            border: 2px solid #cccccc;
+            border-radius: 20px;
+            padding: 8px 15px;
+            font-size: 16px;
+            color: #333333;
+        }
+
+        .search-bar input[type="text"]::placeholder {
+            color: #999999;
+        }
+
+        .header-icon {
+            margin-left: 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .header-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .arrow-down {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid #666666;
+            animation: arrowAnimation 1s infinite;
+        }
+
+        @keyframes arrowAnimation {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+        }
+
+        /* Style for the user profiles */
+        .user-profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .user-profile .username {
+            font-weight: bold;
+        }
+
+        /* Remove circular rectangle highlight on hover */
+        .user-profile:hover .username {
+            background-color: initial;
+            color: initial;
+            padding: initial;
+            border-radius: initial;
+        }
+
+        /* Style for the post button */
+        .post-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff;
+            border: 2px solid #cccccc;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .post-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Style for the post pop-up */
+        .post-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 400px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #cccccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            z-index: 9999; /* Ensure it's above other elements */
+            display: none;
+        }
+
+        .post-popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #cccccc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .post-popup-header h3 {
+            margin: 0;
+        }
+
+        .close-button {
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .post-popup-content {
+            margin-bottom: 20px;
+        }
+
+        .post-popup-content textarea {
+            width: 100%;
+            height: 100px;
+            border: 2px solid #cccccc;
+            border-radius: 5px;
+            padding: 5px;
+            resize: none; /* Prevent resizing */
+            font-size: 16px;
+        }
+
+        /* Dark overlay for the post pop-up */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998; /* Ensure it's above other elements
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998; /* Ensure it's above other elements */
+            display: none;
+        }
+
+        .options-list {
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove default padding */
+        }
+
+        .options-list li {
+            color: #333333; /* Dark grey text color */
+            font-size: 16px; /* Adjust font size as needed */
+            cursor: pointer;
+            padding: 10px 0; /* Add padding to space out the options */
+            border-bottom: 1px solid #cccccc; /* Add bottom border to separate options */
+        }
+
+        .options-list li:hover {
+            background-color: #f0f0f0; /* Light grey background color on hover */
+        }
+
+        .discussion-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #cccccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            z-index: 9999; /* Ensure it's above other elements */
+            display: none;
+        }
+
+        .discussion-popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #cccccc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .discussion-popup-header h3 {
+            margin: 0;
+        }
+
+        .discussion-popup-content {
+            margin-bottom: 20px;
+        }
+
+        .discussion-popup-content input[type="text"],
+        .discussion-popup-content textarea {
+            width: 100%;
+            border: 2px solid #cccccc;
+            border-radius: 5px;
+            padding: 8px 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+</style>
+</head>
+<body>
+<header>
+    <img src="C6DACCBC-CFBE-49DF-A759-8C4EB09E206A.png" width="110" height="110">
+    <h1>RankFileMedia</h1>
+    <div class="header-categories">
+        <a href="#">Home</a>
+        <a href="#">Newsrooms</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+    </div>
+    <img src="2200426A-FAA0-423A-A4EE-CE1A2E465EE3.png" width="55" height="55" alt="Profile" class="header-icon">
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="grey-panel">
+        <div class="main-feed-option" onclick="showMainFeed()">Main Feed</div>
+        <div class="main-feed-option" onclick="showUserNewsroom('Your Newsroom')">Your Newsroom</div>
+        <h2>Your News Reporters</h2>
+        <div class="user-profile" onclick="showUserNewsroom('Jeff Goldblum')">
+            <img src="profile1.jpg">
+            <span class="username">Jeff Goldblum</span>
+        </div>
+        <div class="user-profile" onclick="showUserNewsroom('Paul Joseph Watson')">
+            <img src="profile2.jpg">
+            <span class="username">Paul Joseph Watson</span>
+        </div>
+        <div class="user-profile" onclick="showUserNewsroom('Johnny Depp')">
+            <img src="profile3.jpg">
+            <span class="username">Johnny Depp</span>
+        </div>
+        <div class="user-profile" onclick="showUserNewsroom('Nicolas Cage')">
+            <img src="profile4.jpg">
+            <span class="username">Nicolas Cage</span>
+        </div>
+        <div class="user-profile" onclick="showUserNewsroom('Henry Cavill')">
+            <img src="profile5.jpg">
+            <span class="username">Henry Cavill</span>
+        </div>
+    </div>
+</header>
+<div id="newsroom-display" style="padding: 20px; font-size: 24px;"></div>
+
+<!-- Post Button -->
+<div class="post-button" onclick="showPostPopup()">
+    <img src="plus-icon.png" width="30" height="30" alt="Post">
+</div>
+
+<!-- Post Pop-up -->
+<div class="overlay" id="post-overlay" style="display: none;"></div>
+<div class="post-popup" id="post-popup" style="display: none;">
+    <div class="post-popup-header">
+        <span class="close-button" onclick="hidePostPopup()">X</span>
+    </div>
+    <div class="post-popup-content">
+        <ul class="options-list">
+            <li onclick="selectOption('option1')">Discussion</li>
+            <li onclick="selectOption('option2')">Poll</li>
+            <li onclick="selectOption('option3')">Web Link</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Discussion Pop-up -->
+<div class="discussion-popup" id="discussion-popup" style="display: none;">
+    <div class="discussion-popup-header" style="background-color: #f0f0f0; padding: 10px;">
+        <h3 style="margin: 0;">Discussion Title</h3>
+    </div>
+    <div class="discussion-popup-content" style="margin-bottom: 20px;">
+        <input type="text" placeholder="Title" style="width: 100%; border: 2px solid #cccccc; border-radius: 5px; padding: 8px 10px; font-size: 16px; margin-bottom: 10px;">
+        <textarea placeholder="Description" style="width: 100%; height: 100px; border: 2px solid #cccccc; border-radius: 5px; padding: 5px; resize: none; font-size: 16px;"></textarea>
+    </div>
+    <button class="post-button" onclick="postDiscussion()" style="position: absolute; bottom: 10px; left: 10px; background-color: #007bff; color: #ffffff; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer;">Post</button>
+</div>
+
+
+<script>
+    function showMainFeed() {
+        var newsroomDisplay = document.getElementById('newsroom-display');
+        newsroomDisplay.innerHTML = "<h2 style='opacity: 0; transition: opacity 0.5s ease-out;'>Main Feed</h2>";
+        // Triggering reflow
+        void newsroomDisplay.offsetWidth;
+        newsroomDisplay.firstChild.style.opacity = 1;
+    }
+
+    function showUserNewsroom(username) {
+        var newsroomDisplay = document.getElementById('newsroom-display');
+        newsroomDisplay.innerHTML = "<h2 style='opacity: 0; transition: opacity 0.5s ease-out;'>" + username + "'s Newsroom</h2>";
+        // Triggering reflow
+        void newsroomDisplay.offsetWidth;
+        newsroomDisplay.firstChild.style.opacity = 1;
+    }
+
+    function showPostPopup() {
+        var overlay = document.getElementById('post-overlay');
+        var popup = document.getElementById('post-popup');
+
+        // Set initial opacity to 0
+        overlay.style.opacity = 0;
+        popup.style.opacity = 0;
+
+        // Display the overlay and pop-up
+        overlay.style.display = 'block';
+        popup.style.display = 'block';
+
+        // Gradually increase opacity to 1 (fade-in effect)
+        var opacity = 0;
+        var interval = setInterval(function() {
+            opacity += 0.05;
+            overlay.style.opacity = opacity;
+            popup.style.opacity = opacity;
+            if (opacity >= 1) {
+                clearInterval(interval);
+            }
+        }, 10);
+    }
+
+    function hidePostPopup() {
+        document.getElementById('post-overlay').style.display = 'none';
+        document.getElementById('post-popup').style.display = 'none';
+    }
+
+    function selectOption(option) {
+        if (option === 'option1') { // Discussion
+            showDiscussionPopup();
+        } else if (option === 'option2') { // Poll
+            // Add functionality for the Poll option
+        } else if (option === 'option3') { // Web Link
+            // Add functionality for the Web Link option
+        }
+    }
+
+    function showDiscussionPopup() {
+        var discussionPopup = document.getElementById('discussion-popup');
+        var overlay = document.getElementById('post-overlay');
+
+        overlay.style.display = 'block';
+        discussionPopup.style.display = 'block';
+
+        var opacity = 0;
+        var interval = setInterval(function() {
+            opacity += 0.05;
+            overlay.style.opacity = opacity;
+            discussionPopup.style.opacity = opacity;
+            if (opacity >= 1) {
+                clearInterval(interval);
+            }
+        }, 10);
+    }
+
+    function hideDiscussionPopup() {
+        document.getElementById('post-overlay').style.display = 'none';
+        document.getElementById('discussion-popup').style.display = 'none';
+    }
+</script>
+</body>
+</html>
