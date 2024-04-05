@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-screen-xl flex flex-initial mx-auto p-4">
+    <a href="/main.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/images/icons/100.png" class="h-8" alt="Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">RankFileMedia</span>
+    </a>
+    <div class="flex flex-auto pl-40 pr-40 md:order-1">
+      <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        </svg>
+        <span class="sr-only">Search</span>
+      </button>
+      <div class="relative hidden md:block flex-auto">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+          </svg>
+          <span class="sr-only">Search icon</span>
+        </div>
+        <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+      </div>
+      <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+      <div class="items-center justify-center hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+        <div class="relative mt-3 md:hidden">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+          </div>
+          <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+        </div>
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <a href="/main.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+            </li>
+            <li>
+              <a href="/Homepage.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Newsfeed</a>
+            </li>
+            <li>
+              <a href="/Poll/pollpage.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Poll</a>
+            </li>
+            <li>
+              <a href="/Profile/profilepage.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Mypage</a>
+            </li>
+            <li>
+              <button class="modal-open block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Login</a>
+            </li>
+            
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex items-center justify-between">
+            <!-- Profile Picture -->
+            <div class="flex-shrink-0 mr-6">
+                <img id="profile-picture" class="h-32 w-32 rounded-full object-cover" src="../images/Caleb.png" alt="Profile Picture">
+            </div>
+            <!-- User Info -->
+            <div class="flex-grow">
+                <h1 class="text-2xl font-bold mb-2">John Doe</h1>
+                <p id="email" class="text-gray-700 mb-2">Email: johndoe@example.com</p>
+                <p id="cellphone" class="text-gray-700 mb-2">Cellphone: +1234567890</p>
+                <p id="address" class="text-gray-700 mb-2">Address: 123 Main St, City, Country</p>
+            </div>
+            <!-- Edit Profile Button -->
+            <div class="flex-shrink-0">
+                <button id="edit-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit Profile</button>
+            </div>
+        </div>
+        <!-- Edit Form (Initially Hidden) -->
+        <form id="edit-form" class="hidden mt-4">
+            <input type="text" id="edit-email" class="block w-full mb-2 px-4 py-2 border rounded" placeholder="New Email">
+            <input type="text" id="edit-cellphone" class="block w-full mb-2 px-4 py-2 border rounded" placeholder="New Cellphone">
+            <input type="text" id="edit-address" class="block w-full mb-2 px-4 py-2 border rounded" placeholder="New Address">
+            <input type="file" id="edit-picture" accept="image/*" class="block w-full mb-2 px-4 py-2 border rounded">
+            <button id="save-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Save Changes</button>
+            <button id="cancel-button" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2">Cancel</button>
+        </form>
+
+        <!-- Credit Card Section -->
+        <div class="mt-8">
+            <h2 class="text-xl font-bold mb-2 flex justify-between">
+                <span>Credit Card</span>
+                <button id="toggle-hide-button" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 toggle-hide" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9a7 7 0 00-14 0v2a7 7 0 0014 0V9z" />
+                    </svg>
+                </button>
+            </h2>
+            <div class="flex items-center justify-between">
+                <div>
+                    <p id="credit-card-number" class="text-gray-700 mb-2">1234 5678 9101 1121</p>
+                </div>
+                <div class="flex items-center">
+                    <button id="edit-credit-card-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit Credit Card</button>
+                </div>
+            </div>
+        </div>
+        <!-- Subscription Info Section -->
+        <div class="mt-8">
+            <h2 class="text-xl font-bold mb-2">Subscription Info</h2>
+            <div class="flex items-center">
+                <div class="person-card">
+                    <img id="Person 1" class="h-32 w-32 rounded-full object-cover" src="../images/Emma.png" alt="Person 1">
+                    <p class="text-sm font-semibold mt-2">Jane Don</p>
+                    <p class="text-xs text-gray-600">$5.00</p>
+                </div>
+                <div class="person-card">
+                    <img id="Person 2" class="h-32 w-32 rounded-full object-cover" src="../images/Mason.png" alt="Person 2">
+                    <p class="text-sm font-semibold mt-2">John Smith</p>
+                    <p class="text-xs text-gray-600">$7.00</p>
+                </div>
+            </div>
+            <p class="text-sm text-gray-700 mt-2" id="hire-count">Number of hired people: <span id="count">2</span></p>
+            <div class="flex justify-end mt-4">
+                <button id="manage-subscriptions-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Manage Subscriptions</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Get the manage subscriptions button
+        const manageSubscriptionsButton = document.getElementById('manage-subscriptions-button');
+
+        // Add event listener to manage subscriptions button
+        manageSubscriptionsButton.addEventListener('click', () => {
+            // Logic to delete subscriptions goes here
+            alert('Subscription deleted!');
+        });
+    </script>
+    <script>
+        // Get the number of hired people
+        const hireCount = document.querySelectorAll('.person-card').length;
+        // Display the number of hired people
+        document.getElementById('count').textContent = hireCount;
+    </script>
+
+    <script>
+        // Function to toggle visibility of edit form
+        function toggleEditForm() {
+            document.getElementById('edit-form').classList.toggle('hidden');
+            // Populate edit form with existing user information
+            document.getElementById('edit-email').value = document.getElementById('email').innerText.replace('Email: ', '');
+            document.getElementById('edit-cellphone').value = document.getElementById('cellphone').innerText.replace('Cellphone: ', '');
+            document.getElementById('edit-address').value = document.getElementById('address').innerText.replace('Address: ', '');
+        }
+
+        // Event listener for edit button
+        document.getElementById('edit-button').addEventListener('click', function() {
+            toggleEditForm();
+        });
+
+        // Event listener for cancel button
+        document.getElementById('cancel-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            toggleEditForm();
+        });
+
+        // Event listener for save button
+        document.getElementById('save-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            // Update user information with values from edit form
+            document.getElementById('email').innerText = 'Email: ' + document.getElementById('edit-email').value;
+            document.getElementById('cellphone').innerText = 'Cellphone: ' + document.getElementById('edit-cellphone').value;
+            document.getElementById('address').innerText = 'Address: ' + document.getElementById('edit-address').value;
+
+            // Update profile picture if a new picture is selected
+            var newProfilePicture = document.getElementById('edit-picture').files[0];
+            if (newProfilePicture) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profile-picture').src = e.target.result;
+                };
+                reader.readAsDataURL(newProfilePicture);
+            }
+
+            // Hide edit form
+            toggleEditForm();
+        });
+
+        // Event listener for toggle hide button
+        document.getElementById('toggle-hide-button').addEventListener('click', function() {
+            var creditCardNumberElement = document.getElementById('credit-card-number');
+            var toggleHideIcon = document.querySelector('.toggle-hide');
+            if (creditCardNumberElement.classList.contains('hidden')) {
+                creditCardNumberElement.classList.remove('hidden');
+                toggleHideIcon.classList.remove('text-gray-400');
+                toggleHideIcon.classList.add('text-gray-800');
+                creditCardNumberElement.innerText = creditCardNumberElement.dataset.original;
+            } else {
+                creditCardNumberElement.classList.add('hidden');
+                toggleHideIcon.classList.remove('text-gray-800');
+                toggleHideIcon.classList.add('text-gray-400');
+                creditCardNumberElement.dataset.original = creditCardNumberElement.innerText;
+                creditCardNumberElement.innerText = '************';
+            }
+        });
+
+        // Event listener for edit credit card button
+        document.getElementById('edit-credit-card-button').addEventListener('click', function() {
+            var creditCardNumberElement = document.getElementById('credit-card-number');
+            var editCreditCardButton = document.getElementById('edit-credit-card-button');
+            if (editCreditCardButton.innerText === 'Edit Credit Card') {
+                var creditCardInput = document.createElement('input');
+                creditCardInput.setAttribute('type', 'text');
+                creditCardInput.setAttribute('id', 'edit-credit-card');
+                creditCardInput.setAttribute('class', 'block w-full mb-2 px-4 py-2 border rounded');
+                creditCardInput.value = creditCardNumberElement.innerText.replace('Credit Card Number: ', '');
+                creditCardNumberElement.innerText = '';
+                creditCardNumberElement.appendChild(creditCardInput);
+                editCreditCardButton.innerText = 'Save Credit Card';
+            } else {
+                var editedCreditCardNumber = document.getElementById('edit-credit-card').value;
+                creditCardNumberElement.innerText = editedCreditCardNumber;
+                editCreditCardButton.innerText = 'Edit Credit Card';
+            }
+        });
+    </script>
+</body>
+
+</html>

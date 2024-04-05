@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup with Images and Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: auto;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .back-btn {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    .logo img {
+  width: 150px; /* Change the width as per your requirement */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 30px;
+}
+
+    .popup-container {
+      display: flex;
+      flex-direction: row; /* Changed to row */
+      align-items: flex-start; /* Align items at the start */
+      margin-top: 5%; /* Add margin-top to create space for back button and logo */
+    }
+
+    .left-section {
+      flex: 1;
+      background-color: #f4f4f4;
+      padding: 20px;
+      margin-left: 100px;
+      margin-right: 50px;
+    }
+
+    .section-heading {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .category-container {
+      margin-bottom: 20px;
+    }
+
+    .person-column {
+  display: flex;
+  flex-wrap: wrap; /* Allow flex items to wrap to next line */
+  justify-content: space-around; /* Distribute items evenly with space between them */
+}
+
+    .person-container {
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      color: #000;
+      display: block;
+      margin-right: 20px;
+    }
+
+    .rounded-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+
+    .image-name {
+      margin-top: 5px;
+    }
+
+    .review-stars {
+      color: #ffcc00;
+      font-size: 18px;
+    }
+
+    .followers {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .right-section {
+      flex: 1;
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 100px;
+      margin-right: 100px;
+      margin-left: 50px;
+    }
+
+    .search-container {
+      position: relative; /* Ensure the search bar stays within the right section */
+      margin-bottom: 20px;
+    }
+
+    .search-input {
+      width: calc(100% - 130px); /* Adjust width to leave space for the button */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .search-button {
+      position: absolute; /* Position the button absolutely within the container */
+      top: 0;
+      right: 0;
+      padding: 10px 20px;
+      background-color: #0726f4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .topic-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .topic {
+      background-color: #e0e0e0;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header-container">
+    <a href="main.html" class="back-btn">Back</a>
+    <a href="#" class="logo"><img src="images/icons/logo.png" alt="Logo"></a>
+  </div>
+  <div class="popup-container">
+    <div class="left-section">
+      <h2>Popular Reporters</h2>
+    <div class="category-container">
+      <div class="section-heading">Health</div>
+      <div class="person-column">
+        <a href="./cards/caleb.html" class="person-container">
+          <img src="./images/Caleb.png" alt="Caleb Anderson" class="rounded-image">
+          <div class="image-name">Caleb Anderson</div>
+          <div class="review-stars">★★★★★</div>
+          <div class="followers">15K followers</div>
+        </a>
+        <a href="./cards/contessa.html" class="person-container">
+          <img src="./images/Contessa.png" alt="Contessa Brewer" class="rounded-image">
+          <div class="image-name">Contessa Brewer</div>
+          <div class="review-stars">★★★★★</div>
+          <div class="followers">7.9K followers</div>
+        </a>
+        <a href="dylan.html" class="person-container">
+          <img src="./images/Dylan.png" alt="Dylan Turner" class="rounded-image">
+          <div class="image-name">Dylan Turner</div>
+          <div class="review-stars">★★★★★</div>
+          <div class="followers">22.3K followers</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="category-container">
+      <div class="section-heading">Politics</div>
+      <div class="person-column">
+        <a href="emma.html" class="person-container">
+          <img src="./images/Emma.png" alt="Emma Parker" class="rounded-image">
+          <div class="image-name">Emma Parker</div>
+          <div class="review-stars">★★★★</div>
+          <div class="followers">12.5K followers</div>
+        </a>
+      </a>
+      <a href="ethan.html" class="person-container">
+        <img src="./images/Ethan.png" alt="Ethan Mitchel" class="rounded-image">
+        <div class="image-name">Ethan Mitchel</div>
+        <div class="review-stars">★★★★★</div>
+        <p>18.2K followers</p>
+      </a>
+      <a href="lucas.html" class="person-container">
+        <img src="./images/Lucas.png" alt="Lucas Foster" class="rounded-image">
+        <div class="image-name">Lucas Foster</div>
+        <div class="review-stars">★★★★</div>
+        <p>9K followers</p>
+      </a>
+      </div>
+    </div>
+    <div class="category-container">
+      <div class="section-heading">Technology</div>
+      <div class="person-column">
+        <a href="mason.html" class="person-container">
+          <img src="./images/Mason.png" alt="Mason Parker" class="rounded-image">
+          <div class="image-name">Mason Parker</div>
+          <div class="review-stars">★★★★★</div>
+          <p>11K followers</p>
+        </a>
+        <a href="megan.html" class="person-container">
+          <img src="./images/Megan.png" alt="Megan Cassella" class="rounded-image">
+          <div class="image-name">Megan Cassella</div>
+          <div class="review-stars">★★★</div>
+          <p>17.6K followers</p>
+        </a>
+        <a href="mike.html" class="person-container">
+          <img src="./images/Mike.png" alt="Mike Collins" class="rounded-image">
+          <div class="image-name">Mike Collins</div>
+          <div class="review-stars">★★★★</div>
+          <p>14.9K followers</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="right-section">
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search...">
+      <button class="search-button">Search</button>
+    </div>
+    <h2>Search by Topics</h2>
+    <div class="topic-container">
+      <a href="searchResult.html" class="topic">Healthcare</a>
+      <div class="topic">Politics</div>
+      <div class="topic">Technology</div>
+      <div class="topic">Business</div>
+      <div class="topic">Entertainment</div>
+      <div class="topic">Science</div>
+      <div class="topic">Sport</div>
+      <div class="topic">World news</div>
+      <div class="topic">Education</div>
+
+
+      <!-- Add more topics here -->
+    </div>
+  </div>
+</div>
+</body>
+</html>

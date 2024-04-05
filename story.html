@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story</title>
+    <style>
+        
+       
+        .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+        
+        </style>
+    <script src="https://cdn.tailwindcss.com">
+       
+    </script>
+</head>
+
+<body class="bg-gray-100">
+
+
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-screen-xl flex flex-initial mx-auto p-4">
+        <a href="main.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="images/icons/100.png" class="h-8" alt="Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">RankFileMedia</span>
+        </a>
+        <div class="flex flex-auto pl-40 pr-40 md:order-1">
+          <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+            <span class="sr-only">Search</span>
+          </button>
+          <div class="relative hidden md:block flex-auto">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+              </svg>
+              <span class="sr-only">Search icon</span>
+            </div>
+            <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+          </div>
+          <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+        </div>
+          <div class="items-center justify-center hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+            <div class="relative mt-3 md:hidden">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>
+              </div>
+              <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+            </div>
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                  <a href="/main.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                </li>
+                <li>
+                  <a href="/Homepage.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Newsfeed</a>
+                </li>
+                <li>
+                  <a href="/Poll/pollpage.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Poll</a>
+                </li>
+                <li>
+                  <a href="/Profile/profilepage.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Mypage</a>
+                </li>
+                <li>
+                  <button class="modal-open block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Login</a>
+                </li>
+                
+              </ul>
+          </div>
+        </div>
+      </nav>
+  
+
+ 
+    <main class="flex justify-between">
+        <article class="w-full max-w-6xl mx-auto p-8 bg-white shadow-lg">
+          <h1 class="text-5xl font-bold mt-4 mb-4">Arkansas Foodbank Distribution Event Runs Out of Food Early Because of Demand</h1>
+          <main class="flex justify-between">
+            <article class="w-full max-w-6xl mx-auto p-8 bg-white shadow-lg">
+              
+                <div class="400-h-screen  flex items-center justify-start -mt-8 -mb-4">
+                    <div
+                      class="bg-gray-100  relative shadow-xl  group rounded-xl p-0 transition-all duration-500 transform">
+                      <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxhdmF0YXJ8ZW58MHwwfHx8MTY5MTg0NzYxMHww&ixlib=rb-4.0.3&q=80&w=1080"
+                        class="w-20 h-20  object-center object-cover rounded-full transition-all duration-500 delay-500 transform"
+                      />
+                        <div class="w-fit transition-all transform duration-500">
+                          <h1 class="text-gray-600  font-bold">
+                            Mary Phiri
+                          </h1>
+                          <p class="text-gray-400">updated 22:34 GMT April 04,2024</p>
+                          <a
+                            class="text-xs text-gray-500 ">
+                            mary@gmail.com
+                          </a>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="flex items-center justify-end ml-32">
+                        <svg class="w-8 h-8 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-8 h-8 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-8 h-8 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-8 h-8 text-yellow-300 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-8 h-8 text-gray-300 me-1 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">4.95</p>
+                        <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">out of</p>
+                        <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">5</p>
+                    </div>
+                    <div class="flex items-center  ml-auto">
+                        <!-- Social media icons -->
+                        <a href="#" role="button" class="mx-2">
+                            <!-- Facebook -->
+                            <button class="social-share__share" data-url="https://www.facebook.com/dialog/share?app_id=80401312489&href=https%3A%2F%2Fwww.cnn.com%2F2020%2F04%2F28%2Fus%2Farkansas-foodbank-distribution&display=popup" data-type="facebook" aria-label="share with facebook" title="Share with Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" style="color: #1877f2" viewBox="0 0 24 24">
+                                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                </svg>
+                            </button>
+                        </a>
+                    
+                    
+                    <script>
+                        // JavaScript to handle the share functionality
+                        const shareButtons = document.querySelectorAll('.social-share__share');
+                    
+                        shareButtons.forEach(button => {
+                            button.addEventListener('click', function(event) {
+                                event.preventDefault(); // Prevent default button action (i.e., form submission)
+                    
+                                const url = button.dataset.url;
+                                // Open share dialog
+                                window.open(url, 'Share', 'width=600,height=400,scrollbars=no');
+                            });
+                        });
+                    </script>
+                <a href="#" role="button" class="mx-2" >
+                    <!-- Instagram -->
+                    <button class="social-share__share1" data-url="https://www.facebook.com/dialog/share?app_id=80401312489&href=https%3A%2F%2Fwww.cnn.com%2F2020%2F04%2F28%2Fus%2Farkansas-foodbank-distribution&display=popup" data-type="instagram" aria-label="share with instagram" title="Share with instagram">
+                       
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="currentColor"
+                    style="color: #c13584"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                    </button>
+                  </a>
+                  <script>
+                    // JavaScript to handle the share functionality
+                    const shareButtons1 = document.querySelectorAll('.social-share__share1');
+                
+                    shareButtons1.forEach(button => {
+                        button.addEventListener('click', function(event) {
+                            event.preventDefault(); // Prevent default button action (i.e., form submission)
+                
+                            const url = button.dataset.url;
+                            // Open share dialog
+                            window.open(url, 'Share', 'width=600,height=400,scrollbars=no');
+                        });
+                    });
+                </script>
+                <a href="#!" role="button" class="mx-3">
+                    <!-- Twitter -->
+                    <button class="social-share__share2" data-url="https://twitter.com/intent/tweet?text=Check%20out%20this%20article%3A&url=https%3A%2F%2Fwww.cnn.com%2F2020%2F04%2F28%2Fus%2Farkansas-foodbank-distribution" data-type="x" aria-label="x" title="Share with x">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="currentColor"
+                    style="color: #0c0d0e"
+                    viewBox="0 0 24 24">
+                    <path fill d="M13.903 10.469 21.348 2h-1.764l-6.465 7.353L7.955 2H2l7.808 11.12L2 22h1.764l6.828-7.765L16.044 22H22l-8.097-11.531Zm-2.417 2.748-.791-1.107L4.4 3.3h2.71l5.08 7.11.791 1.107 6.604 9.242h-2.71l-5.389-7.542Z"></path>
+                  </svg>
+                </button>
+                  </a>
+                  <script>
+                    // JavaScript to handle the share functionality
+                    const shareButtons2 = document.querySelectorAll('.social-share__share2');
+                
+                    shareButtons2.forEach(button => {
+                        button.addEventListener('click', function(event) {
+                            event.preventDefault(); // Prevent default button action (i.e., form submission)
+                
+                            const url = button.dataset.url;
+                            // Open share dialog
+                            window.open(url, 'Share', 'width=600,height=400,scrollbars=no');
+                        });
+                    });
+                </script>
+                
+                  
+                  <!-- Bookmark icon -->
+                  <svg id="bookmarkIcon" class="h-8 w-8 text-black-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                  </svg>
+                  <script>
+                    const bookmarkIcon = document.getElementById('bookmarkIcon');
+                    bookmarkIcon.addEventListener('click', function() {
+                        bookmarkIcon.classList.toggle('bookmark-default');
+                        bookmarkIcon.classList.toggle('bookmark-filled');
+                    });
+                </script>
+                <style>
+                    .bookmark-default {
+    fill: none;
+}
+
+.bookmark-filled {
+    fill: black;
+}
+                </style>
+                </div>
+                </div>
+              </div>
+            </article>
+          </main>
+         
+               
+                
+                
+              </div>
+        
+              
+              
+          </div>
+          
+    
+          
+          
+        
+          
+            <img src="./images/pic for story.jpg" alt="Article Image" class="w-full h-50 object-cover rounded flex justify-center">
+            
+            
+            <div class="flex justify-center">
+                <div style="max-width: 700px;">
+                    <div class="flex justify-between text-black-600 text-1xl my-8">
+                        <span class="text-gray-800">
+                            The Arkansas Foodbank planned to hand out food for four hours on Tuesday, but the demand was so high that all the food was gone within an hour and a half, the charity said.
+                            Cars lined up at the Outlets of Little Rock mall, which hosted the event, as early as 5:30 a.m., when the food bank’s workers arrived to unload the trucks, Arkansas Foodbank CEO Rhonda Sanders said.
+                            At one point, cars were wrapped around the mall, up and down the parking lot, and along the access road, Sanders said.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div style="max-width: 700px;">
+                    <div class="flex justify-between text-black-600 text-1xl my-8">
+                        <span class="text-gray-800">
+                            The Arkansas Foodbank planned to hand out food for four hours on Tuesday, but the demand was so high that all the food was gone within an hour and a half, the charity said.
+                            Cars lined up at the Outlets of Little Rock mall, which hosted the event, as early as 5:30 a.m., when the food bank’s workers arrived to unload the trucks, Arkansas Foodbank CEO Rhonda Sanders said.
+                            At one point, cars were wrapped around the mall, up and down the parking lot, and along the access road, Sanders said.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div style="max-width: 700px;">
+                    <div class="flex justify-between text-black-600 text-1xl my-8">
+                        <span class="text-gray-800">
+                            The Arkansas Foodbank planned to hand out food for four hours on Tuesday, but the demand was so high that all the food was gone within an hour and a half, the charity said.
+                            Cars lined up at the Outlets of Little Rock mall, which hosted the event, as early as 5:30 a.m., when the food bank’s workers arrived to unload the trucks, Arkansas Foodbank CEO Rhonda Sanders said.
+                            At one point, cars were wrapped around the mall, up and down the parking lot, and along the access road, Sanders said.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div style="max-width: 700px;">
+                    <div class="flex justify-between text-black-600 text-1xl my-8">
+                        <span class="text-gray-800">
+                            The Arkansas Foodbank planned to hand out food for four hours on Tuesday, but the demand was so high that all the food was gone within an hour and a half, the charity said.
+                            Cars lined up at the Outlets of Little Rock mall, which hosted the event, as early as 5:30 a.m., when the food bank’s workers arrived to unload the trucks, Arkansas Foodbank CEO Rhonda Sanders said.
+                            At one point, cars were wrapped around the mall, up and down the parking lot, and along the access road, Sanders said.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="bg-white py-8 lg:py-16 antialiased -mb-14">
+                <div class="max-w-2xl mx-auto px-4">
+                    <div class="flex justify-between items-center mb-6">
+                      <h2 class="text-lg lg:text-2xl font-bold text-gray-900 ">Article Ratings</h2>
+                  </div>
+          <div class="flex items-center mb-5">
+            <p class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded">4.9</p>
+            <p class="ms-2 font-medium text-gray-900 ">Excellent</p>
+            <span class="w-1 h-1 mx-2 bg-gray-900 rounded-full"></span>
+            <p class="text-sm font-medium text-gray-500  ">376 reviews</p>
+          </section>
+        </div>
+        <div class="gap-40 sm:grid sm:grid-cols-2">
+            <div class="justify-right items-right pl-72">
+                <dl class="flex items-center"> <!-- Added 'flex' and 'items-center' classes -->
+                    <dt class="text-sm font-medium text-gray-500">Flow</dt>
+                    <div class="tooltip">
+                        <svg class="h-4 w-4 text-blue-500 ml-1 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                        </svg>
+                        <span class="tooltiptext">Is the article easy to follow and understand? Was it engaging?</span>
+                    </div>
+                    </dl>
+                    
+                    <dd class="flex items-center mb-3">
+                        <div class="w-80 bg-gray-200 rounded h-2.5 me-2">
+                            <div class="bg-yellow-400 h-2.5 rounded " style="width: 88%"></div>
+                        </div>
+                        <span class="text-sm font-medium text-gray-500 ">4.7</span>
+                    </dd>
+                
+                <dl class="flex items-center">
+                    <dt class="text-sm font-medium text-gray-500">Accuracy</dt>
+                    <div class="tooltip">
+                        <svg class="h-4 w-4 text-blue-500 ml-1 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                        </svg>
+                        <span class="tooltiptext">Did the author stick to the facts without sensationalizing of misrepresentation or overt obvious bias?</span>
+                    </div>
+                </dl>
+
+                    <dd class="flex items-center mb-3">
+                        <div class="w-60 bg-gray-200 rounded h-2.5 me-2">
+                            <div class="bg-yellow-400 h-2.5 rounded " style="width: 89%"></div>
+                        </div>
+                        <span class="text-sm font-medium text-gray-500 ">4.3</span>
+                    </dd>
+                
+                <dl class="flex items-center">
+                    <dt class="text-sm font-medium text-gray-500">Context</dt>
+                    <div class="tooltip">
+                        <svg class="h-4 w-4 text-blue-500 ml-1 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                        </svg>
+                        <span class="tooltiptext">Did the article offer depth, historical context and thoroughly explore the topic?</span>
+                    </div>
+                </dl>
+                    <dd class="flex items-center mb-3">
+                        <div class="w-60 bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
+                            <div class="bg-yellow-400 h-2.5 rounded dark:bg-blue-500" style="width: 88%"></div>
+                        </div>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4.5</span>
+                    </dd>
+               
+                <dl class="flex items-center">
+                    <dt class="text-sm font-medium text-gray-500">Transparency</dt>
+                    <div class="tooltip">
+                        <svg class="h-4 w-4 text-blue-500 ml-1 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                        </svg>
+                        <span class="tooltiptext">Was the article properly sourced with credible experts and represent a variety of opinions?</span>
+                    </div>
+                </dl>
+
+                    <dd class="flex items-center mb-3">
+                        <div class="w-60 bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
+                            <div class="bg-yellow-400 h-2.5 rounded dark:bg-blue-500" style="width: 54%"></div>
+                        </div>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4.2</span>
+                    </dd>
+                </dl>
+                <dl class="flex items-center">
+                    <dt class="text-sm font-medium text-gray-500">Satisfaction</dt>
+                    <div class="tooltip">
+                        <svg class="h-4 w-4 text-blue-500 ml-1 mt-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                        </svg>
+                        <span class="tooltiptext">Was the article properly sourced with credible experts and represent a variety of opinions?</span>
+                    </div>
+                </dl>
+
+                  <dd class="flex items-center ">
+                      <div class="w-60 bg-gray-200 rounded h-2.5 dark:bg-gray-700 me-2">
+                          <div class="bg-yellow-400 h-2.5 rounded dark:bg-blue-500" style="width: 89%"></div>
+                      </div>
+                      <span class="text-sm font-medium text-gray-500 dark:text-gray-400">4.9</span>
+                  </dd>
+              </dl>
+              
+            </div>
+            
+            <div class="justify-end item-end">
+                
+              <dl>
+                
+                  <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Flow</dt>
+                  <dd class="flex items-center mb-4">
+                    
+                      <div class="flex items-center space-x-1" id="star-container">
+                        <svg class="w-6 h-4 text-yellow ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-6 h-4 text-yellow ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-6 h-4 text-yellow ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-6 h-4 text-yellow ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        <svg class="w-6 h-4 text-yellow ms-1 star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                        </svg>
+                        
+                        
+                      </div>
+                      <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
+                  </dd>
+                  <script>
+                    // JavaScript 코드
+                    const stars = document.querySelectorAll('.star');
+                  
+                    stars.forEach((star, index) => {
+                      star.addEventListener('click', () => {
+                        stars.forEach((s, i) => {
+                          if (i <= index) {
+                            s.style.fill = '#f0cf40'; 
+                          } else {
+                            s.style.fill = 'gray'; 
+                          }
+                        });
+                      });
+                    });
+                  </script>
+                </dl>
+              </dl>
+              <dl>
+                <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Accuracy</dt>
+                <dd class="flex items-center mb-4">
+                  
+                    <div class="flex items-center space-x-1" id="star-container">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      
+                    </div>
+                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
+                </dd>
+                <script>
+                    // JavaScript 코드
+                    const stars1 = document.querySelectorAll('.star1');
+                  
+                    stars1.forEach((star, index) => {
+                      star.addEventListener('click', () => {
+                        stars1.forEach((s, i) => {
+                          if (i <= index) {
+                            s.style.fill = '#f0cf40'; 
+                          } else {
+                            s.style.fill = 'gray'; 
+                          }
+                        });
+                      });
+                    });
+                  </script>
+            </dl>
+            <dl>
+                <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Context</dt>
+                <dd class="flex items-center mb-4">
+                  
+                    <div class="flex items-center space-x-1">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      
+                    </div>
+                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
+                </dd>
+                <script>
+                    // JavaScript 코드
+                    const stars2 = document.querySelectorAll('.star2');
+                  
+                    stars2.forEach((star, index) => {
+                      star.addEventListener('click', () => {
+                        stars2.forEach((s, i) => {
+                          if (i <= index) {
+                            s.style.fill = '#f0cf40'; 
+                          } else {
+                            s.style.fill = 'gray'; 
+                          }
+                        });
+                      });
+                    });
+                  </script>
+            </dl>
+            <dl>
+                <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Transparency</dt>
+                <dd class="flex items-center mb-4">
+                  
+                    <div class="flex items-center space-x-1">
+                      <svg class="w-6 h-4 text-yellow ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow ms-1 star3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      
+                    </div>
+                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
+                </dd>
+                <script>
+                    // JavaScript 코드
+                    const stars3 = document.querySelectorAll('.star3');
+                  
+                    stars3.forEach((star, index) => {
+                      star.addEventListener('click', () => {
+                        stars3.forEach((s, i) => {
+                          if (i <= index) {
+                            s.style.fill = '#f0cf40'; 
+                          } else {
+                            s.style.fill = 'gray'; 
+                          }
+                        });
+                      });
+                    });
+                  </script>
+            </dl>
+            <dl>
+                <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Satisfaction</dt>
+                <dd class="flex items-center mb-3">
+                  
+                    <div class="flex items-center space-x-1">
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300 ms-1 star4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      <svg class="w-6 h-4 text-yellow-300  ms-1 star4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 22 20">
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                      </svg>
+                      
+                    </div>
+                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400"></span>
+                    
+                </dd>
+                <script>
+                    // JavaScript 코드
+                    const stars4 = document.querySelectorAll('.star4');
+                  
+                    stars4.forEach((star, index) => {
+                      star.addEventListener('click', () => {
+                        stars4.forEach((s, i) => {
+                          if (i <= index) {
+                            s.style.fill = '#f0cf40'; 
+                          } else {
+                            s.style.fill = 'gray'; 
+                          }
+                        });
+                      });
+                    });
+                  </script>
+                <div class="flex justify-center pr-80 mt-8">
+                    
+                    
+                    <button id="submitBtn" type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                        Submit Rating
+                    </button>
+                    
+                    <script>
+                        // JavaScript to handle button click event
+                        document.getElementById("submitBtn").addEventListener("click", function() {
+                            if (this.disabled) {
+                                // Display a pop-up message if button is disabled
+                                alert("You have already rated this article.");
+                            } else {
+                                // Display a confirmation pop-up
+                                if (confirm("Once you submit the rating, you are not allowed to change it. Do you still want to confirm the rating for this article?")) {
+                                    // If user confirms, display a thank you message
+                                    alert("Thanks for rating this article.");
+                        
+                                    // Disable the button
+                                    this.disabled = true;
+                                    // Change the text of the button to "Rated"
+                                    this.textContent = "Rated";
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+          </div>
+          
+      
+        </div>
+        <section class="bg-white py-8 lg:py-16 antialiased">
+            <div class="max-w-2xl mx-auto px-4">
+                <div class="flex justify-between items-center mb-6">
+                  <h2 class="text-lg lg:text-2xl font-bold text-gray-900">Comments(3)</h2>
+              </div>
+              <form class="mb-6">
+                  <div class="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200">
+                      <label for="comment" class="sr-only">Your comment</label>
+                      <textarea id="comment" rows="6"
+                          class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none"
+                          placeholder="Write a comment..." required></textarea>
+                  </div>
+                  <button type="submit"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                      Post comment
+                  </button>
+              </form>
+              <article class="p-6 text-base bg-white rounded-lg">
+                  <footer class="flex justify-between items-center mb-2">
+                      <div class="flex items-center">
+                          <p class="inline-flex items-center mr-3 text-sm text-gray-900 font-semibold"><img
+                                  class="mr-2 w-6 h-6 rounded-full"
+                                  src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                                  alt="Michael Gough">Michael Gough</p>
+                          <p class="text-sm text-gray-600 dark:text-gray-400"><time pubdate datetime="2022-02-08"
+                                  title="February 8th, 2022">Feb. 8, 2022</time></p>
+                      </div>
+                  </footer>
+                  <p class="text-gray-500">Very straight-to-point article. Really worth time reading. Thank you! But tools are just the
+                      instruments for the UX designers. The knowledge of the design tools are as important as the
+                      creation of the design strategy.</p>
+                  <div class="flex items-center mt-4 space-x-4">
+                    <svg id="likeIcon" class="h-5 w-5 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" /></svg>
+                    <script>
+                        const likeIcon = document.getElementById('likeIcon');
+                        likeIcon.addEventListener('click', function() {
+                            likeIcon.classList.toggle('likeIcon-default');
+                            likeIcon.classList.toggle('likeIcon-filled');
+                        });
+                    </script>
+                    <style>
+                        .likeIcon-default {
+        fill: none;
+    }
+    
+    .likeIcon-filled {
+        fill: rgb(75, 75, 198);
+    }
+                    </style>
+                    <div class="flex items-center">
+                        
+                        
+                        <a href="#" class="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white">1.1k likes</a>
+                    </div>
+                      <button type="button"
+                          class="flex items-center text-sm text-gray-500 hover:underline font-medium">
+                          
+                         
+                          Reply
+                      </button>
+                  </div>
+              </article>
+              <article class="p-6 mb-3 ml-6 lg:ml-12 text-base bg-white rounded-lg">
+                  <footer class="flex justify-between items-center mb-2">
+                      <div class="flex items-center">
+                          <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold"><img
+                                  class="mr-2 w-6 h-6 rounded-full"
+                                  src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                                  alt="Jese Leos">Jese Leos</p>
+                          <p class="text-sm text-gray-600"><time pubdate datetime="2022-02-12"
+                                  title="February 12th, 2022">Feb. 12, 2022</time></p>
+                                  
+                      </div>
+                      
+                  </footer>
+                  <p class="text-gray-500 ">Much appreciated! Glad you liked it ☺️</p>
+                  <div class="flex items-center mt-4 space-x-4">
+                    <svg id="likeIcon1"class="h-5 w-5 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" /></svg>
+                    <script>
+                        const likeIcon1 = document.getElementById('likeIcon1');
+                        likeIcon1.addEventListener('click', function() {
+                            likeIcon1.classList.toggle('likeIcon-default');
+                            likeIcon1.classList.toggle('likeIcon-filled');
+                        });
+                    </script>
+                    <style>
+                        .likeIcon-default {
+        fill: none;
+    }
+    
+    .likeIcon-filled {
+        fill: rgb(75, 75, 198);
+    }
+                    </style>
+                    <div class="flex items-center">
+                        
+                        
+                        <a href="#" class="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white">1 likes</a>
+                    </div>
+                      <button type="button"
+                          class="flex items-center text-sm text-gray-500 hover:underline font-medium">
+                          
+                                         
+                          Reply
+                      </button>
+                  </div>
+              </article>
+              <article class="p-6 mb-3 text-base bg-white border-t border-gray-200">
+
+                  <footer class="flex justify-between items-center mb-2">
+                      <div class="flex items-center">
+                          <p class="inline-flex items-center mr-3 text-sm text-gray-900 font-semibold"><img
+                                  class="mr-2 w-6 h-6 rounded-full"
+                                  src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+                                  alt="Bonnie Green">Bonnie Green</p>
+                          <p class="text-sm text-gray-600"><time pubdate datetime="2022-03-12"
+                                  title="March 12th, 2022">Mar. 12, 2022</time></p>
+                      </div>
+                  </footer>
+                  <p class="text-gray-500">The article covers the essentials, challenges, myths and stages the UX designer should consider while creating the design strategy.</p>
+                  <div class="flex items-center mt-4 space-x-4">
+                    
+                    
+                    <svg id="likeIcon2"class="h-5 w-5 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" /></svg>
+                    <script>
+                        const likeIcon2 = document.getElementById('likeIcon2');
+                        likeIcon2.addEventListener('click', function() {
+                            likeIcon2.classList.toggle('likeIcon-default');
+                            likeIcon2.classList.toggle('likeIcon-filled');
+                        });
+                    </script>
+                    <style>
+                        .likeIcon-default {
+        fill: none;
+    }
+    
+    .likeIcon-filled {
+        fill: rgb(75, 75, 198);
+    }
+                    </style>
+                    <div class="flex items-center">
+                        
+                        
+                        <a href="#" class="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white">31 likes</a>
+                    </div>
+                      <button type="button"
+                          class="flex items-center text-sm text-gray-500 hover:underline font-medium">
+                          
+                          Reply
+                      </button>
+                  </div>
+              </article>
+              <article class="p-6 text-base bg-white border-t border-gray-200">
+                  <footer class="flex justify-between items-center mb-2">
+                      <div class="flex items-center">
+                          <p class="inline-flex items-center mr-3 text-sm text-gray-900 font-semibold"><img
+                                  class="mr-2 w-6 h-6 rounded-full"
+                                  src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                                  alt="Helene Engels">Helene Engels</p>
+                          <p class="text-sm text-gray-600 "><time pubdate datetime="2022-06-23"
+                                  title="June 23rd, 2022">Jun. 23, 2022</time></p>
+                      </div>
+                                           
+                  </footer>
+                  <p class="text-gray-500">Thanks for sharing this. I do came from the Backend development and explored some of the tools to design my Side Projects.</p>
+                  <div class="flex items-center mt-4 space-x-4">
+                    <svg id="likeIcon3" class="h-5 w-5 text-gray-500 cursor-pointer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+                    </svg>
+                    
+                    <script>
+                        const likeIcon3 = document.getElementById('likeIcon3');
+                        console.log(likeIcon3); 
+                        const likesCountElement = document.getElementById('likesCount');
+                        console.log(likesCountElement);
+                        let likesCount = 0; // Initial likes count
+                    
+                        likeIcon3.addEventListener('click', function() {
+                            console.log("Click handler called");
+                            // Toggle filled and default class
+                            likeIcon3.classList.toggle('likeIcon-default');
+                            likeIcon3.classList.toggle('likeIcon-filled');
+                    
+                            // Increase likes count by one
+                            likesCount++;
+                            likesCountElement.textContent = likesCount + ' likes';
+                        });
+                    </script>
+                    
+                    <style>
+                        .likeIcon-default {
+                            fill: none;
+                        }
+                    
+                        .likeIcon-filled {
+                            fill: rgb(75, 75, 198);
+                        }
+                    </style>
+                    
+                    <div class="flex items-center">
+                        <a id="likesCount" href="#" class="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white">0 likes</a>
+                    </div>
+                    <button type="button"
+                          class="flex items-center text-sm text-gray-500 hover:underline font-medium">
+                          
+                          Reply
+                      </button>
+                  </div>
+              </article>
+            </div>
+          </section>
+          
+        </article>
+        
+        
+        <aside class="w-1/4 p-8">
+          <h2 class="text-xl font-bold mb-4">Picks for you</h2>
+          <div class="mb-4 relative">
+              <!-- Container with rounded circle -->
+              <div class="w-70 h-24 rounded-3xl bg-gray-200 overflow-hidden">
+                  <!-- Cat picture inside the rounded circle -->
+                  <img src="/images/news1.jpg" alt="news1" class="w-24 h-full rounded-3xl object-cover" >
+              </div>
+              <!-- Content below the circle -->
+              
+              <div class="absolute inset-0 flex flex-col justify-center items-right text-right pr-1  bg-opacity-50 text-black">
+                <h3 class="font-medium text-sm pr-5">Best March Madness upset</h3>
+                <p class="text-sm font-medium pr-7">Our predictions for NCAA </p>
+                <span class="text-sm font-medium pr-10">tournament first-round</span>
+            </div>
+            
+            
+            
+          </div>
+          <!-- Repeat the above div block for each sidebar post -->
+          
+          <div class="mb-4 relative">
+              <!-- Container with rounded circle -->
+              <div class="w-70 h-24 rounded-3xl bg-gray-200 overflow-hidden">
+                  <!-- Cat picture inside the rounded circle -->
+                  <img src="/images/news2.jpg" alt="news2" class="w-24 h-full rounded-3xl object-cover" >
+              </div>
+              <!-- Content below the circle -->
+              
+              <div class="absolute inset-0 flex flex-col justify-center items-right text-right pr-1 bg-opacity-50 text-black">
+                <h3 class="font-medium text-sm pr-5">Parts of Haiti in darkness   </h3>
+                <p class="text-sm font-meduim pr-14">after armed groups </p>
+                <span class="text-sm font-medium pr-10">attack power stations</span>
+            </div>
+            
+            
+            
+          </div>
+        <div class="mb-4 relative">
+            <!-- Container with rounded circle -->
+            <div class="w-70 h-24 rounded-3xl bg-gray-200 overflow-hidden">
+                <!-- Cat picture inside the rounded circle -->
+                <img src="/images/news3.jpg" alt="news3" class="w-24 h-full rounded-3xl object-cover" >
+            </div>
+            <!-- Content below the circle -->
+            
+            <div class="absolute inset-0 flex flex-col justify-center items-right text-right pr-1 bg-opacity-50 text-black">
+                <h3 class="font-medium text-sm pr-4">Best March Madness upset</h3>
+                <p class="text-sm font-medium pr-6">Our predictions for NCAA </p>
+                <span class="text-sm font-medium pr-10">tournament first-round</span>
+          </div>
+          
+          
+          
+        </div>
+        <h2 class="text-xl font-bold mb-4">More Reporters</h2>
+          <div class="mb-4 relative">
+              <!-- Container with rounded circle -->
+              <div class="w-70 h-20 rounded-3xl bg-gray-200 overflow-hidden">
+                  <!-- Cat picture inside the rounded circle -->
+                  <img src="/images/reporter1.jpg" alt="reporter1" class="w-24 h-full rounded-3xl object-cover" >
+              </div>
+              <!-- Content below the circle -->
+              
+              <div class="absolute inset-0 flex flex-col justify-center items-center text-center  bg-opacity-50 text-black">
+                <h3 class="font-bold">Michael Kim</h3>
+                
+            </div>
+            
+            
+            
+          </div>
+          <!-- Repeat the above div block for each sidebar post -->
+          
+          <div class="mb-4 relative">
+              <!-- Container with rounded circle -->
+              <div class="w-70 h-20 rounded-3xl bg-gray-200 overflow-hidden">
+                  <!-- Cat picture inside the rounded circle -->
+                  <img src="/images/reporter2.jpg" alt="reporter2" class="w-24 h-full rounded-3xl object-cover" >
+              </div>
+              <!-- Content below the circle -->
+              
+              <div class="absolute inset-0 flex flex-col justify-center items-center text-center  bg-opacity-50 text-black">
+                <h3 class="font-bold">Peter Parker</h3>
+                
+            </div>
+            
+            
+            
+          </div>
+        <div class="mb-4 relative">
+            <!-- Container with rounded circle -->
+            <div class="w-70 h-20 rounded-3xl bg-gray-200 overflow-hidden">
+                <!-- Cat picture inside the rounded circle -->
+                <img src="/images/reporter3.jpg" alt="reporter3" class="w-24 h-full rounded-3xl object-cover" >
+            </div>
+            <!-- Content below the circle -->
+            
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center  bg-opacity-50 text-black">
+              <h3 class="font-bold">Jacob Sargent</h3>
+              
+          </div>
+          
+          
+          
+        </div>
+      </aside>
+    </main>
+    
+    <footer class="text-center p-4 text-gray-600">
+        © Year Company Name. All rights reserved.
+    </footer>
+</body>
+
+</html>
