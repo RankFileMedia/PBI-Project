@@ -1,7 +1,7 @@
 const rankFileMedia = "rank-file-media-v1";
 const assets = [
   "/",
-  "/main.html",
+  "/index.html",
   "/search.html",
   "/story.html",
   "/js/app.js",
