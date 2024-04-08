@@ -83,9 +83,7 @@
       background-color: #28a745;
     }
 
-    .follow-btn {
-      background-color: #ffc107;
-    }
+
 
     .recent-stories {
       margin-top: 20px;
@@ -187,7 +185,7 @@
     <div class="buttons">
       <button class="contact-btn" onclick="openModal('contactModal')">Contact</button>
       <button class="hire-btn" onclick="openModal('hireModal')">Hire</button>
-      <button class="follow-btn" onclick="toggleFollow(this)">Follow</button>
+      
     </div>
     <div class="recent-stories">
       <h2>Her Recent Stories</h2>
@@ -260,15 +258,6 @@
         successMessage.style.display = "none";
         closeModal('hireModal');
       }, 2000);
-    }
-
-    // Function to toggle follow button text
-    function toggleFollow(button) {
-      if (button.innerText === "Follow") {
-        button.innerText = "Followed";
-      } else {
-        button.innerText = "Follow";
-      }
     }
   </script>
 </body>
