@@ -19,6 +19,19 @@
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative; /* Added for positioning */
+    }
+
+    .logo img {
+      width: 150px; /* Adjust the width as per your requirement */
+      height: auto; /* Maintain aspect ratio */
+      margin-left: 600px;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
     }
 
     .profile {
@@ -30,11 +43,22 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
+      margin-top: 30px;
       margin-right: 20px;
+    }
+
+    .review-stars {
+      color: #ffcc00;
+      font-size: 18px;
+      margin-top: 5px;
     }
 
     .profile-info {
       flex: 1;
+    }
+
+    .profession {
+      margin-bottom: 10px;
     }
 
     .buttons {
@@ -58,28 +82,183 @@
     .hire-btn {
       background-color: #28a745;
     }
+
+
+
+    .recent-stories {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    .story {
+      flex: 1 0 30%; /* Each story occupies 30% of the container */
+      margin-right: 20px;
+      margin-bottom: 20px; /* Add bottom margin for spacing */
+      text-align: left;
+    }
+
+    .story:last-child {
+      margin-right: 0; /* Remove right margin for the last section */
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      z-index: 1000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 70%;
+      max-width: 600px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="email"],
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .submit-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      color: green;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <a href="../homepage.html" class="logo"><img src="/images/icons/logo.png" alt="Logo"></a> <!-- Add your logo image source here -->
+    <a href="/search.html" class="back-btn">Back</a>
     <div class="profile">
       <img src="/images/Caleb.png" alt="Caleb">
       <div class="profile-info">
         <h1>Caleb Anderson</h1>
-        <p>Investigative journalism</p>
+        <div class="profession">Healthcare journalism <span class="review-stars">★★★★★</span></div>
+        <div class="followers">15K followers</div>
+        <p>Covers: West Coast</p>
         <p>
-            Caleb Anderson is a dedicated investigative journalist known for his relentless pursuit of truth and justice.
-             With a passion for uncovering untold stories, Caleb fearlessly tackles complex issues, from political corruption
-              to social injustices. His work has earned him recognition for its depth and impact, making him a trusted voice in the field of journalism.
-               Committed to using his platform for positive change, Caleb approaches each story with integrity, empathy,
-                and a determination to make a difference.
+          As a dedicated healthcare journalist, I am committed to delivering accurate and 
+          insightful reporting on critical issues impacting the healthcare industry. With 
+          a passion for unraveling complex medical topics and a commitment to empowering 
+          readers with valuable information, I strive to bridge the gap between healthcare
+           professionals and the public. Through my work, I aim to shed light on healthcare
+            policies, breakthroughs in medical research, and the human stories behind healthcare 
+            challenges, ultimately contributing to a better-informed and healthier society.
         </p>
       </div>
     </div>
     <div class="buttons">
-      <button class="contact-btn">Contact</button>
-      <button class="hire-btn">Hire</button>
+      <button class="contact-btn" onclick="openModal('contactModal')">Contact</button>
+      <button class="hire-btn" onclick="openModal('hireModal')">Hire</button>
+      
     </div>
-  </div>d
+    <div class="recent-stories">
+      <h2>His Recent Stories</h2>
+      <div class="story">
+        <h3>Protein may cause painful reaction to cold, offer treatment target</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget nisi eu metus malesuada commodo.</p>
+      </div>
+      <div class="story">
+        <h3>Most losing Medicaid in Utah couldn't complete process to stay on</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+      </div>
+      <div class="story">
+        <h3>Doctors looking into why Utah has one of highest multiple sclerosis rates in nation</h3>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="close-button" onclick="closeModal('contactModal')">X</div>
+    <div class="contact-form">
+      <h2>Contact</h2>
+      <form>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" class="input-field" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" class="input-field" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+      <div class="success-message" id="contactSuccess">Successfully submitted!</div>
+    </div>
+  </div>
+  <!-- End of Contact modal -->
+
+  <!-- Hire Modal -->
+  <div id="hireModal" class="modal">
+    <div class="close-button" onclick="closeModal('hireModal')">X</div>
+    <div class="contact-form">
+      <h2>Hire</h2>
+      <p>Subscribe for $9.99 per month</p>
+      <button class="submit-button" onclick="subscribe()">Subscribe</button>
+      <div class="success-message" id="hireSuccess">Successfully subscribed!</div>
+    </div>
+  </div>
+  <!-- End of Hire modal -->
+
+  <script>
+    // Function to open the modal
+    function openModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = "block";
+    }
+
+    // Function to close the modal
+    function closeModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = "none";
+    }
+
+    // Function to handle subscription
+    function subscribe() {
+      var successMessage = document.getElementById("hireSuccess");
+      successMessage.style.display = "block";
+      setTimeout(function() {
+        successMessage.style.display = "none";
+        closeModal('hireModal');
+      }, 2000);
+    }
+  </script>
 </body>
 </html>

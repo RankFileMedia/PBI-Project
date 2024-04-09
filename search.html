@@ -13,16 +13,28 @@
       position: relative;
     }
 
+    .header-container {
+      display: flex;
+      align-items: center; /* Align items vertically */
+      margin-left: 100px; /* Adjust margin */
+    }
+
     .back-btn {
+      text-decoration: none;
+      color: #000;
+      font-size: 20px;
       margin-right: 20px;
-      margin-left: 20px;
+    }
+
+    .logo {
+      margin-right: auto; /* Push logo to the right */
     }
 
     .logo img {
-  width: 150px; /* Change the width as per your requirement */
-  height: auto; /* Maintain aspect ratio */
-  margin-top: 30px;
-}
+      width: 150px;
+      height: auto;
+      margin-top: 30px;
+    }
 
     .popup-container {
       display: flex;
@@ -136,8 +148,8 @@
 
 <body>
   <div class="header-container">
-    <a href="index.html" class="back-btn">Back</a>
-    <a href="#" class="logo"><img src="images/icons/logo.png" alt="Logo"></a>
+    <a href="search.html" class="back-btn">&#9664;</a>
+    <a href="homepage.html" class="logo"><img src="images/icons/logo.png" alt="Logo"></a>
   </div>
   <div class="popup-container">
     <div class="left-section">
@@ -157,7 +169,7 @@
           <div class="review-stars">★★★★★</div>
           <div class="followers">7.9K followers</div>
         </a>
-        <a href="dylan.html" class="person-container">
+        <a href="./cards/dylan.html" class="person-container">
           <img src="./images/Dylan.png" alt="Dylan Turner" class="rounded-image">
           <div class="image-name">Dylan Turner</div>
           <div class="review-stars">★★★★★</div>
@@ -169,20 +181,20 @@
     <div class="category-container">
       <div class="section-heading">Politics</div>
       <div class="person-column">
-        <a href="emma.html" class="person-container">
+        <a href="./cards/emma.html" class="person-container">
           <img src="./images/Emma.png" alt="Emma Parker" class="rounded-image">
           <div class="image-name">Emma Parker</div>
           <div class="review-stars">★★★★</div>
           <div class="followers">12.5K followers</div>
         </a>
       </a>
-      <a href="ethan.html" class="person-container">
+      <a href="./cards/ethan.html" class="person-container">
         <img src="./images/Ethan.png" alt="Ethan Mitchel" class="rounded-image">
         <div class="image-name">Ethan Mitchel</div>
         <div class="review-stars">★★★★★</div>
         <p>18.2K followers</p>
       </a>
-      <a href="lucas.html" class="person-container">
+      <a href="./cards/lucas.html" class="person-container">
         <img src="./images/Lucas.png" alt="Lucas Foster" class="rounded-image">
         <div class="image-name">Lucas Foster</div>
         <div class="review-stars">★★★★</div>
@@ -193,19 +205,19 @@
     <div class="category-container">
       <div class="section-heading">Technology</div>
       <div class="person-column">
-        <a href="mason.html" class="person-container">
+        <a href="./cards/mason.html" class="person-container">
           <img src="./images/Mason.png" alt="Mason Parker" class="rounded-image">
           <div class="image-name">Mason Parker</div>
           <div class="review-stars">★★★★★</div>
           <p>11K followers</p>
         </a>
-        <a href="megan.html" class="person-container">
+        <a href="./cards/megan.html" class="person-container">
           <img src="./images/Megan.png" alt="Megan Cassella" class="rounded-image">
           <div class="image-name">Megan Cassella</div>
           <div class="review-stars">★★★</div>
           <p>17.6K followers</p>
         </a>
-        <a href="mike.html" class="person-container">
+        <a href="./cards/mike.html" class="person-container">
           <img src="./images/Mike.png" alt="Mike Collins" class="rounded-image">
           <div class="image-name">Mike Collins</div>
           <div class="review-stars">★★★★</div>

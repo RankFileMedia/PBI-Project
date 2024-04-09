@@ -17,6 +17,8 @@
       margin-right: 0;
       background-color: #fffdfd;
       padding: 20px;
+      display: flex;
+      justify-content: space-between; /* Align items horizontally */
     }
 
     .search-container {
@@ -64,7 +66,7 @@
     }
 
     .follow-button, .contact-button {
-      padding: 8px 15px;
+      padding: 8px px;
       background-color: #007bff;
       color: #fff;
       border: none;
@@ -84,22 +86,23 @@
       margin-right: 10px;
     }
     .back-btn {
-      margin-right: 20px;
-      margin-left: 20px;
+     text-decoration: none; /* Remove underline */
+     color: #000; /* Set color */
+     font-size: 20px; /* Adjust font size */
+    margin-right: 20px; /* Adjust margin */
     }
 
     .logo img {
       width: 150px; /* Change the width as per your requirement */
       height: auto; /* Maintain aspect ratio */
-      margin-top: 30px;
-      margin-left: 600px;
     }
   </style>
 </head>
 <body>
   <div class="header-container">
-    <a href="search.html" class="back-btn">Back</a>
-    <a href="#" class="logo"><img src="images/icons/logo.png" alt="Logo"></a>
+    <a href="search.html" class="back-btn">&#9664;</a>
+    <a href="homepage.html" class="logo"><img src="images/icons/logo.png" alt="Logo"></a>
+  </div>
   </div>
   <div class="search-container">
     <input type="text" class="search-input" placeholder="Search...">
@@ -115,7 +118,7 @@
           <div class="person-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero at ultrices laoreet.</div>
         </div>
       
-      <button class="follow-button">Follow</button>
+      <button class="follow-button">Hire</button>
       <button class="contact-button">Contact</button>
     </div>
   </div>
@@ -127,7 +130,7 @@
         <div class="person-name">Caleb Anderson</div>
         <div class="person-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero at ultrices laoreet.</div>
       </div>
-      <button class="follow-button">Follow</button>
+      <button class="follow-button">Hire</button>
       <button class="contact-button">Contact</button>
     </div>
 
@@ -138,7 +141,7 @@
           <div class="person-name">Dylan Turner</div>
           <div class="person-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero at ultrices laoreet.</div>
         </div>
-        <button class="follow-button">Follow</button>
+        <button class="follow-button">Hire</button>
         <button class="contact-button">Contact</button>
       </div>
 
@@ -149,7 +152,7 @@
             <div class="person-name">John Doe</div>
             <div class="person-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero at ultrices laoreet.</div>
           </div>
-          <button class="follow-button">Follow</button>
+          <button class="follow-button">Hire</button>
           <button class="contact-button">Contact</button>
         </div>
       </div>
