@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .hidden {display: none;}
+        .hidden { display: none; }
     </style>
 </head>
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -81,119 +81,124 @@
         <div class="max-w-xl w-full p-4">
             <div class="overflow-y-auto">
                 <!-- First article rectangle -->
-                <div id="article1" class="bg-white shadow-md rounded-lg mb-4">
-                    <div class="px-6 py-4">
-                        <div class="flex items-center">
-                            <div class="w-40 h-40 bg-gray-300 rounded-full flex-shrink-0 mr-4">
-                                <img class="w-full h-full object-cover rounded-full" src="../images/Caleb.png" alt="User Avatar">
-                            </div>
-                            <div>
-                                <p class="text-lg font-semibold text-gray-800">Which of these article topics are you interested in?</p>
-                                <p class="text-sm text-gray-600">Reporter: Reporter Name</p>
-                                <p class="text-sm text-gray-600">Live poll: Medicine</p>
-                                <p class="text-sm text-gray-600">This poll will be closed in 36 hours</p>
-                                <div class="mt-4">
-                                    <div class="flex items-center">
-                                        <input type="radio" id="option1" name="option" class="h-5 w-5 text-blue-600">
-                                        <label for="option1" class="ml-2">Covid-19 Fact vs. Fiction</label>
-                                    </div>
-                                    <div class="flex items-center mt-2">
-                                        <input type="radio" id="option2" name="option" class="h-5 w-5 text-blue-600">
-                                        <label for="option2" class="ml-2">Covid-19 Impact by age</label>
-                                    </div>
-                                    <div class="flex items-center mt-2">
-                                        <input type="radio" id="option3" name="option" class="h-5 w-5 text-blue-600">
-                                        <label for="option3" class="ml-2">State-by-sate response to Covid-19</label>
+                <form id="form1">
+                    <div id="article1" class="bg-white shadow-md rounded-lg mb-4">
+                        <div class="px-6 py-4">
+                            <div class="flex items-center">
+                                <div class="w-40 h-40 bg-gray-300 rounded-full flex-shrink-0 mr-4">
+                                    <img class="w-full h-full object-cover rounded-full" src="../images/Caleb.png" alt="User Avatar">
+                                </div>
+                                <div>
+                                    <p class="text-lg font-semibold text-gray-800">Which of these article topics are you interested in?</p>
+                                    <p class="text-sm text-gray-600">Reporter: Reporter Name</p>
+                                    <p class="text-sm text-gray-600">Live poll: Medicine</p>
+                                    <p class="text-sm text-gray-600">This poll will be closed in 36 hours</p>
+                                    <div class="mt-4">
+                                        <div class="flex items-center">
+                                            <input type="radio" id="option1_1" name="option1" class="h-5 w-5 text-blue-600">
+                                            <label for="option1_1" class="ml-2">Covid-19 Fact vs. Fiction</label>
+                                        </div>
+                                        <div class="flex items-center mt-2">
+                                            <input type="radio" id="option1_2" name="option1" class="h-5 w-5 text-blue-600">
+                                            <label for="option1_2" class="ml-2">Covid-19 Impact by age</label>
+                                        </div>
+                                        <div class="flex items-center mt-2">
+                                            <input type="radio" id="option1_3" name="option1" class="h-5 w-5 text-blue-600">
+                                            <label for="option1_3" class="ml-2">State-by-sate response to Covid-19</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="px-6 py-4">
+                            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full">Submit Poll</button>
+                        </div>
                     </div>
-                    <div class="px-6 py-4">
-                        <button id="submit1" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full">Submit Poll</button>
-                    </div>
-                </div>
-                <!-- "Thank you" message -->
-                <div id="thankYouMessage1" class="hidden bg-white text-green-900 px-6 py-4 rounded-lg mb-4">Thank you! Your vote has been submitted!</div>
+                    <!-- "Thank you" message -->
+                    <div id="thankYouMessage1" class="hidden bg-white text-green-900 px-6 py-4 rounded-lg mb-4">Thank you! Your vote has been submitted!</div>
+                </form>
                 <!-- Second article rectangle -->
-                <div id="article2" class="bg-white shadow-md rounded-lg mb-4">
-                    <div class="px-6 py-4">
-                        <div class="flex items-center">
-                            <div class="w-40 h-40 bg-gray-300 rounded-full flex-shrink-0 mr-4">
-                                <img class="w-full h-full object-cover rounded-full" src="../images/Contessa.png" alt="User Avatar">
-                            </div>
-                            <div>
-                                <p class="text-lg font-semibold text-gray-800">Which of these article topics are you interested in?</p>
-                                <p class="text-sm text-gray-600">Reporter: Reporter Name</p>
-                                <p class="text-sm text-gray-600">Live poll: Tech</p>
-                                <p class="text-sm text-gray-600">This poll will be closed in 36 hours</p>
-                                <div class="mt-4">
-                                    <div class="flex items-center">
-                                        <input type="radio" id="option1" name="option" class="h-5 w-5 text-blue-600">
-                                        <label for="option1" class="ml-2">AI and it's dangers and benefits</label>
-                                    </div>
-                                    <div class="flex items-center mt-2">
-                                        <input type="radio" id="option2" name="option" class="h-5 w-5 text-blue-600">
-                                        <label for="option2" class="ml-2">Cybersecurity at home</label>
-                                    </div>
-                                    <div class="flex items-center mt-2">
-                                        <input type="radio" id="option3" name="option" class="h-5 w-5 text-blue-600">
-                                        <label for="option3" class="ml-2">Best methods to keep you safe digitally</label>
+                <form id="form2">
+                    <div id="article2" class="bg-white shadow-md rounded-lg mb-4">
+                        <div class="px-6 py-4">
+                            <div class="flex items-center">
+                                <div class="w-40 h-40 bg-gray-300 rounded-full flex-shrink-0 mr-4">
+                                    <img class="w-full h-full object-cover rounded-full" src="../images/Contessa.png" alt="User Avatar">
+                                </div>
+                                <div>
+                                    <p class="text-lg font-semibold text-gray-800">Which of these article topics are you interested in?</p>
+                                    <p class="text-sm text-gray-600">Reporter: Reporter Name</p>
+                                    <p class="text-sm text-gray-600">Live poll: Tech</p>
+                                    <p class="text-sm text-gray-600">This poll will be closed in 36 hours</p>
+                                    <div class="mt-4">
+                                        <div class="flex items-center">
+                                            <input type="radio" id="option2_1" name="option2" class="h-5 w-5 text-blue-600">
+                                            <label for="option2_1" class="ml-2">AI and it's dangers and benefits</label>
+                                        </div>
+                                        <div class="flex items-center mt-2">
+                                            <input type="radio" id="option2_2" name="option2" class="h-5 w-5 text-blue-600">
+                                            <label for="option2_2" class="ml-2">Cybersecurity at home</label>
+                                        </div>
+                                        <div class="flex items-center mt-2">
+                                            <input type="radio" id="option2_3" name="option2" class="h-5 w-5 text-blue-600">
+                                            <label for="option2_3" class="ml-2">Best methods to keep you safe digitally</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="px-6 py-4">
+                            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full">Submit Poll</button>
+                        </div>
                     </div>
-                    <div class="px-6 py-4">
-                        <button id="submit2" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full">Submit Poll</button>
-                    </div>
-                </div>
-                <!-- "Thank you" message -->
-                <div id="thankYouMessage2" class="hidden bg-white text-green-900 px-6 py-4 rounded-lg mb-4">Thank you! Your vote has been submitted!</div>
-                 <!-- Third article rectangle -->
-                 <div id="article3" class="bg-white shadow-md rounded-lg mb-4">
-                    <div class="px-6 py-4">
-                        <div class="flex items-center">
-                            <div class="w-40 h-40 bg-gray-300 rounded-full flex-shrink-0 mr-4">
-                                <img class="w-full h-full object-cover rounded-full" src="../images/Ethan.png" alt="User Avatar">
-                            </div>
-                            <div>
-                                <p class="text-lg font-semibold text-gray-800">Which of these article topics are you interested in?</p>
-                                <p class="text-sm text-gray-600">Reporter: Reporter Name</p>
-                                <p class="text-sm text-gray-600">Live poll: Politics</p>
-                                <p class="text-sm text-gray-600">This poll will be closed in 36 hours</p>
-                                <div class="mt-4">
-                                    <div class="flex items-center">
-                                        <input type="radio" id="option1" name="option" class="h-5 w-5 text-blue-600">
-                                        <label for="option1" class="ml-2">Why do we need political parties?</label>
-                                    </div>
-                                    <div class="flex items-center mt-2">
-                                        <input type="radio" id="option2" name="option" class="h-5 w-5 text-blue-600">
-                                        <label for="option2" class="ml-2">Electoral systems around the world</label>
-                                    </div>
-                                    <div class="flex items-center mt-2">
-                                        <input type="radio" id="option3" name="option" class="h-5 w-5 text-blue-600">
-                                        <label for="option3" class="ml-2">The importance of international relations</label>
+                    <!-- "Thank you" message -->
+                    <div id="thankYouMessage2" class="hidden bg-white text-green-900 px-6 py-4 rounded-lg mb-4">Thank you! Your vote has been submitted!</div>
+                </form>
+                <!-- Third article rectangle -->
+                <form id="form3">
+                    <div id="article3" class="bg-white shadow-md rounded-lg mb-4">
+                        <div class="px-6 py-4">
+                            <div class="flex items-center">
+                                <div class="w-40 h-40 bg-gray-300 rounded-full flex-shrink-0 mr-4">
+                                    <img class="w-full h-full object-cover rounded-full" src="../images/Ethan.png" alt="User Avatar">
+                                </div>
+                                <div>
+                                    <p class="text-lg font-semibold text-gray-800">Which of these article topics are you interested in?</p>
+                                    <p class="text-sm text-gray-600">Reporter: Reporter Name</p>
+                                    <p class="text-sm text-gray-600">Live poll: Politics</p>
+                                    <p class="text-sm text-gray-600">This poll will be closed in 36 hours</p>
+                                    <div class="mt-4">
+                                        <div class="flex items-center">
+                                            <input type="radio" id="option3_1" name="option3" class="h-5 w-5 text-blue-600">
+                                            <label for="option3_1" class="ml-2">Why do we need political parties?</label>
+                                        </div>
+                                        <div class="flex items-center mt-2">
+                                            <input type="radio" id="option3_2" name="option3" class="h-5 w-5 text-blue-600">
+                                            <label for="option3_2" class="ml-2">Electoral systems around the world</label>
+                                        </div>
+                                        <div class="flex items-center mt-2">
+                                            <input type="radio" id="option3_3" name="option3" class="h-5 w-5 text-blue-600">
+                                            <label for="option3_3" class="ml-2">The importance of international relations</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="px-6 py-4">
+                            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full">Submit Poll</button>
+                        </div>
                     </div>
-                    <div class="px-6 py-4">
-                        <button id="submit3" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full">Submit Poll</button>
-                    </div>
-                </div>
-                <!-- "Thank you" message -->
-                <div id="thankYouMessage3" class="hidden bg-white text-green-900 px-6 py-4 rounded-lg mb-4">Thank you! Your vote has been submitted!</div>
+                    <!-- "Thank you" message -->
+                    <div id="thankYouMessage3" class="hidden bg-white text-green-900 px-6 py-4 rounded-lg mb-4">Thank you! Your vote has been submitted!</div>
+                </form>
             </div>
         </div>
     </div>
     <script>
-        document.getElementById("submit1").addEventListener("click", function() {
-            // Check if an option is selected
-            var optionSelected = document.querySelector('input[name="option"]:checked');
+        document.getElementById("form1").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var optionSelected = document.querySelector('input[name="option1"]:checked');
             if (optionSelected) {
-                // Hide the article rectangle and show the "Thank you" message
                 document.getElementById("article1").classList.add("hidden");
                 document.getElementById("thankYouMessage1").classList.remove("hidden");
             } else {
@@ -202,11 +207,10 @@
         });
     </script>
     <script>
-        document.getElementById("submit2").addEventListener("click", function() {
-            // Check if an option is selected
-            var optionSelected = document.querySelector('input[name="option"]:checked');
+        document.getElementById("form2").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var optionSelected = document.querySelector('input[name="option2"]:checked');
             if (optionSelected) {
-                // Hide the article rectangle and show the "Thank you" message
                 document.getElementById("article2").classList.add("hidden");
                 document.getElementById("thankYouMessage2").classList.remove("hidden");
             } else {
@@ -215,11 +219,10 @@
         });
     </script>
     <script>
-        document.getElementById("submit3").addEventListener("click", function() {
-            // Check if an option is selected
-            var optionSelected = document.querySelector('input[name="option"]:checked');
+        document.getElementById("form3").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var optionSelected = document.querySelector('input[name="option3"]:checked');
             if (optionSelected) {
-                // Hide the article rectangle and show the "Thank you" message
                 document.getElementById("article3").classList.add("hidden");
                 document.getElementById("thankYouMessage3").classList.remove("hidden");
             } else {
