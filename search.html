@@ -144,9 +144,16 @@
       margin-bottom: 10px;
     }
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $("header").load("header.html"); 
+    });
+  </script>
 </head>
 
 <body>
+  <header></header>
   <div class="header-container">
     <a href="search.html" class="back-btn">&#9664;</a>
     <a href="homepage.html" class="logo"><img src="images/icons/logo.png" alt="Logo"></a>
