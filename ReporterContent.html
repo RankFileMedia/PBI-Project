@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RankFileMedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    /*$(function(){
+      $("header").load("Header.html"); 
+    });*/
+    $(function(){
+      $.get("Header.html", function(data) {
+        $("header").replaceWith(data);
+      });
+    });
+  </script>
+</head>
+<body class="font-sans bg-white text-gray-900">
+  <header></header>
+  <div class="main-content container mx-auto py-8 px-4 flex position-fixed">
+    <div class="flex flex-wrap w-full md:w-3/4 mx-4">
+        <h1 class="mb-9 text-left text-3xl font-bold"> Manage Content </h1>
+    </div>
+  </div>
+</body>
+</html>

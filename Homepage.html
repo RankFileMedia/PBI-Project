@@ -8,8 +8,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
-    $(function(){
+    /*$(function(){
       $("header").load("Header.html"); 
+    });*/
+    $(function(){
+      $.get("Header.html", function(data) {
+        $("header").replaceWith(data);
+      });
     });
   </script>
   
@@ -17,9 +22,9 @@
 
 <body class="font-sans bg-white text-gray-900">
   <header></header>
-    <div class="container mx-auto py-8 px-4 flex">
-        <div class="main-content flex flex-wrap w-full md:w-3/4 mx-4">
-        </div>
+    <div class="container mx-auto py-8 px-4 flex z-1 position-fixed">
+      <div class="main-content flex flex-wrap w-full md:w-3/4 mx-4">
+      </div>
             <!-- News Reporters Section -->
             <div class="w-full md:w-1/5 px-4">
                 <div class="sticky top-16">
@@ -41,10 +46,10 @@
                     </ul>
                 </div>
             </div>             
-            </div>
-            <script src="./article.js"></script>
+    </div>
+    <script src="./article.js"></script>
 
-            </body>
+</body>
             
-            </html>
+</html>
             
