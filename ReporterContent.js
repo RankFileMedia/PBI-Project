@@ -36,11 +36,43 @@ let articles = [
         rating: 5 
     },
     
-    // Add more articles as needed
+    // Retrieve these from the database instead
 ];
 
+let polls = [
+    { 
+        id: 1,
+        img: 'https://static01.nyt.com/images/2024/03/26/multimedia/26russia-torture-1-fwzq/26russia-torture-1-fwzq-jumbo.jpg?quality=75&auto=webp', 
+        title: 'How would you rate my articles?', 
+        author: 'Jeff', 
+        ratings: [
+            {
+                title: 'This article is informative',
+                rating: 1,
+                votes: 1
+            },
+            {
+                title: 'This article is well-written',
+                rating: 2,
+                votes: 1
+            },
+            {
+                title: 'This article is engaging',
+                rating: 3,
+                votes: 1
+            },
+            {
+                title: 'This article is biased',
+                rating: 4,
+                votes: 1
+            },
+        ],
 
-
+    },
+   
+    
+    // Retrieve these from the database instead
+];
 
 function generateStars(rating) {
     let stars = '';
@@ -65,22 +97,25 @@ function generateStars(rating) {
     return stars;
 }   
 
-function generateArticle(article) {
+function listArticles(article) {
     return `
-    <div class="w-full md:w-1/2 px-4 mb-8 transition-transform duration-300 transform hover:scale-105">
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="${article.img}" alt="News Story Image" class="w-full h-64 object-cover">
-        <div class="p-4">
-            <h2 class="text-xl font-semibold mb-2">${article.title}</h2>
-            <p class="text-gray-600">${article.author}</p>
-            <p class="rating flex">${generateStars(article.rating)}</p>
+    <div class="w-full px-3 mb-4 transition-transform duration-300 transform hover:scale-105">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-row" style="min-width: 400px;">
+        <div class="flex items-center justify-center min-w-28 w-28 h-28 overflow-hidden rounded-lg">
+            <img src="${article.img}" alt="News Story Image" class="w-full h-full object-cover">
+        </div>
+        <div class="p-3">
+            <h2 class="text-lg font-semibold mb-2" style="min-height: 32px;">${article.title}</h2>
+            <div class="data flex">
+            Comments: --- Ratings: --- Total Rating: <p class="rating flex ml-1">${generateStars(article.rating)}</p>
+            </div>
         </div>
     </div>
     </div>
     `;
 }
 
-let articleHTML = articles.map(article => generateArticle(article)).join('');
+let articleHTML = articles.map(article => listArticles(article)).join('');
 // += is to append and = is to overwrite
-document.querySelector('.main-content').innerHTML += articleHTML;
-//document.querySelector('.main-content').innerHTML = articleHTML;
+document.querySelector('#articles-content').innerHTML += articleHTML;
+document.querySelector('#articles-content').classList.remove('hidden');

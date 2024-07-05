@@ -21,9 +21,22 @@
 <body class="font-sans bg-white text-gray-900">
   <header></header>
   <div class="main-content container mx-auto py-8 px-4 flex position-fixed">
-    <div class="flex flex-wrap w-full md:w-3/4 mx-4">
+    <div class="flex flex-col w-full md:w-3/4 mx-4">
         <h1 class="mb-9 text-left text-3xl font-bold"> Manage Content </h1>
+        <div class="options">
+          <button class="border-2 border-solid mx-3 px-3" id="show-articles">My Articles</button>
+          <button class="border-2 border-solid mx-3 px-3" id="show-polls-chats">Polls/Chats</button>
+        </div>
+        <div id="articles-content" class="content hidden">
+          <!-- Articles content goes here -->
+          <p>Articles content...</p>
+        </div>
+        <div id="polls-chats-content" class="content hidden">
+          <!-- Polls and Chats content goes here -->
+          <p>Polls and Chats content...</p>
+        </div>
     </div>
   </div>
+  <script src="./ReporterContent.js"></script>
 </body>
 </html>
