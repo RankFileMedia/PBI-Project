@@ -1,35 +1,41 @@
 let articles = [
     { 
+        id: 1,
         img: 'https://static01.nyt.com/images/2024/03/26/multimedia/26russia-torture-1-fwzq/26russia-torture-1-fwzq-jumbo.jpg?quality=75&auto=webp', 
         title: 'Display of Battered Men Was Russia’s Warning to the Public, Analysts Say', 
         author: 'Valerie Hopkins & Neil MacFarquhar | The New York Times', 
         rating: 3 
     },
     { 
+        id: 2,
         img: 'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-860w,f_auto,q_auto:best/rockcms/2024-03/240320-mcr-kidney-transplant-inline-ac-547p-ce0c0f.jpg', 
         title: 'In a first, surgeons successfully transplant a pig kidney into a man', 
         author: 'Berkeley Lovelace Jr. and Patrick Martin | NBC', 
         rating: 4 
     },
     { 
+        id: 3,
         img: 'https://ichef.bbci.co.uk/news/1024/cpsprodpb/3840/production/_133000441_metrokyiv.png.webp', 
         title: 'Ukraine war: Two Russian landing ships hit off Crimea, officials say', 
         author: 'James Gregory & Paulin Kola | BBC', 
         rating: 3 
     },
     { 
+        id: 4,
         img: 'https://media.cnn.com/api/v1/images/stellar/prod/2024-03-24t201819z-1400983683-rc2js6a3f3if-rtrmadp-3-russia-shooting-suspects-court-2.jpg?q=w_1110,c_fill/f_webp', 
         title: 'Moscow concert hall attack suspects appear in court as Russia defends security services', 
         author: 'Christian Edwards, Masha Angelova, Josh Pennington and Anna Chernova | CNN', 
         rating: 5 
     },
     { 
+        id: 5,
         img: 'https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/LF6Z3GTB2QH5DA4BORXNN2Y7OQ.jpg&w=1200', 
         title: 'Putin says ‘radical Islamists’ attacked concert hall, suggests link to Ukraine', 
         author: 'Mary Ilyushina | Washington Times', 
         rating: 2 
     },
     { 
+        id: 6,
         img: 'https://d3i6fh83elv35t.cloudfront.net/static/2024/03/transplant-1024x683.jpg', 
         title: 'Transplant of pig kidney into a human marks medical milestone', 
         author: 'William Brangham | PBS News Hour', 
@@ -99,19 +105,19 @@ function generateStars(rating) {
 
 function listArticles(article) {
     return `
-    <div class="w-full px-3 mb-4 transition-transform duration-300 transform hover:scale-105">
-    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-row" style="min-width: 400px;">
-        <div class="flex items-center justify-center min-w-28 w-28 h-28 overflow-hidden rounded-lg">
-            <img src="${article.img}" alt="News Story Image" class="w-full h-full object-cover">
-        </div>
-        <div class="p-3">
-            <h2 class="text-lg font-semibold mb-2" style="min-height: 32px;">${article.title}</h2>
-            <div class="data flex">
-            Comments: --- Ratings: --- Total Rating: <p class="rating flex ml-1">${generateStars(article.rating)}</p>
+    <a href="story.html?id=${article.id}" class="w-full px-3 mb-4">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-row transition-transform duration-300 transform hover:scale-105" style="min-width: 400px;">
+            <div class="flex items-center justify-center min-w-28 w-28 h-28 overflow-hidden rounded-lg">
+                <img src="${article.img}" alt="News Story Image" class="w-full h-full object-cover">
+            </div>
+            <div class="p-3">
+                <h2 class="text-lg font-semibold mb-2" style="min-height: 32px;">${article.title}</h2>
+                <div class="data flex">
+                Comments: --- Ratings: --- Total Rating: <p class="rating flex ml-1">${generateStars(article.rating)}</p>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
+    </a>
     `;
 }
 
