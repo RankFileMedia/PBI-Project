@@ -1,37 +1,43 @@
 let articles = [
     { 
         img: 'https://static01.nyt.com/images/2024/03/26/multimedia/26russia-torture-1-fwzq/26russia-torture-1-fwzq-jumbo.jpg?quality=75&auto=webp', 
-        title: 'Display of Battered Men Was Russia’s Warning to the Public, Analysts Say', 
+        title: 'Display of Battered Men Was Russia’s Warning to the Public, Analysts Say',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 
         author: 'Valerie Hopkins & Neil MacFarquhar | The New York Times', 
         rating: 3 
     },
     { 
         img: 'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-860w,f_auto,q_auto:best/rockcms/2024-03/240320-mcr-kidney-transplant-inline-ac-547p-ce0c0f.jpg', 
         title: 'In a first, surgeons successfully transplant a pig kidney into a man', 
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 
         author: 'Berkeley Lovelace Jr. and Patrick Martin | NBC', 
         rating: 4 
     },
     { 
         img: 'https://ichef.bbci.co.uk/news/1024/cpsprodpb/3840/production/_133000441_metrokyiv.png.webp', 
         title: 'Ukraine war: Two Russian landing ships hit off Crimea, officials say', 
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 
         author: 'James Gregory & Paulin Kola | BBC', 
         rating: 3 
     },
     { 
         img: 'https://media.cnn.com/api/v1/images/stellar/prod/2024-03-24t201819z-1400983683-rc2js6a3f3if-rtrmadp-3-russia-shooting-suspects-court-2.jpg?q=w_1110,c_fill/f_webp', 
         title: 'Moscow concert hall attack suspects appear in court as Russia defends security services', 
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 
         author: 'Christian Edwards, Masha Angelova, Josh Pennington and Anna Chernova | CNN', 
         rating: 5 
     },
     { 
         img: 'https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/LF6Z3GTB2QH5DA4BORXNN2Y7OQ.jpg&w=1200', 
         title: 'Putin says ‘radical Islamists’ attacked concert hall, suggests link to Ukraine', 
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 
         author: 'Mary Ilyushina | Washington Times', 
         rating: 2 
     },
     { 
         img: 'https://d3i6fh83elv35t.cloudfront.net/static/2024/03/transplant-1024x683.jpg', 
         title: 'Transplant of pig kidney into a human marks medical milestone', 
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 
         author: 'William Brangham | PBS News Hour', 
         rating: 5 
     },
@@ -67,16 +73,21 @@ function generateStars(rating) {
 
 function generateArticle(article) {
     return `
-    <div class="w-full md:w-1/2 px-4 mb-8 transition-transform duration-300 transform hover:scale-105">
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <img src="${article.img}" alt="News Story Image" class="w-full h-64 object-cover">
-        <div class="p-4">
-            <h2 class="text-xl font-semibold mb-2">${article.title}</h2>
-            <p class="text-gray-600">${article.author}</p>
+<div class="flex w-full md:w-full mb-8">
+    <div class="flex-1">
+        <img src="${article.img}" alt="News Story Image" class="w-full h-full object-cover rounded-l-lg">
+    </div>
+    <div class="flex-1 bg-white rounded-r-lg shadow-md p-4 flex flex-col">
+        <div class="flex flex-col justify-between h-full">
+            <div>
+                <h2 class="text-xl font-semibold mb-4">${article.title}</h2> <!-- Increased spacing after title -->
+                <p class="text-gray-600 mb-4">${article.author}</p> <!-- Increased spacing after author -->
+                <p class="text-gray-600 mb-2">${article.description}</p>
+            </div>
             <p class="rating flex">${generateStars(article.rating)}</p>
         </div>
     </div>
-    </div>
+</div>
     `;
 }
 
